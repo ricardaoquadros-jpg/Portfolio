@@ -26,34 +26,18 @@ const Logo = () => (
     className="text-primary h-7 w-7"
   >
     <path
-      d="M4 19.1666V4H11.6923C12.7487 4 13.6923 4.83333 13.6923 5.8V7.4C13.6923 8.46667 12.7487 9.3 11.6923 9.3H8.53846"
+      d="M4 20V4H11C13.2091 4 15 5.79086 15 8V9C15 11.2091 13.2091 13 11 13H8"
       stroke="currentColor"
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
-      d="M8.53845 9.3L13.6923 19.1667"
+      d="M11 9L18 20"
       stroke="currentColor"
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-    />
-    <circle
-      cx="14.5"
-      cy="14.5"
-      r="3.5"
-      stroke="currentColor"
-      strokeWidth="2"
-    />
-    <line
-      x1="17.5"
-      y1="17.5"
-      x2="20"
-      y2="20"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
     />
   </svg>
 );
