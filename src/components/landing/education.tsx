@@ -12,7 +12,7 @@ const educationData = [
   {
     institution: "Escola Estadual de Ensino Médio Dr. Solon Tavares",
     course: "Técnico em Informática",
-    period: "2022 – 2025",
+    period: "2023 – 2025",
   },
   {
     institution: "Colégio Estadual Augusto Meyer",
@@ -32,7 +32,7 @@ export function Education() {
           Minha jornada educacional na área de tecnologia.
         </p>
       </div>
-      <div className="relative max-w-lg mx-auto">
+      <div className="relative max-w-xl mx-auto">
         <div className="absolute left-0 top-0 h-full w-px ml-4 bg-border" aria-hidden="true"></div>
         <div className="space-y-8">
           {educationData.map((item) => (
