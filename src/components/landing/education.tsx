@@ -14,6 +14,7 @@ const educationData = [
     institution: "Escola Estadual de Ensino Médio Dr. Solon Tavares",
     course: "Técnico em Informática",
     period: "2023 – 2025",
+    url: "https://www.solontavares.com/informatica.html",
   },
   {
     institution: "Colégio Estadual Augusto Meyer",
