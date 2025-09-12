@@ -15,7 +15,6 @@ import {
   ChevronRight,
   Projector,
   Download,
-  Gamepad2,
   type LucideIcon,
 } from 'lucide-react';
 
@@ -38,5 +37,4 @@ export const Icons = {
   github: Github,
   right: ChevronRight,
   download: Download,
-  valorant: Gamepad2,
 };
