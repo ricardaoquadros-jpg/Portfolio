@@ -1,13 +1,14 @@
 import { Section } from "@/components/shared/section";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { GraduationCap } from "lucide-react";
-import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 const educationData = [
   {
     institution: "Universidade Estadual do Rio Grande do Sul (UERGS)",
     course: "Engenharia da Computação",
     period: "2025 – Presente",
+    url: "#",
   },
   {
     institution: "Escola Estadual de Ensino Médio Dr. Solon Tavares",
@@ -43,7 +44,13 @@ export function Education() {
               <div className="flex-1 ml-12">
                  <Card className="w-full shadow-md hover:shadow-primary/20 transition-shadow">
                   <CardHeader>
-                    <CardTitle className="font-headline text-xl text-center">{item.course}</CardTitle>
+                    {item.url ? (
+                      <Link href={item.url} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                        <CardTitle className="font-headline text-xl text-center">{item.course}</CardTitle>
+                      </Link>
+                    ) : (
+                      <CardTitle className="font-headline text-xl text-center">{item.course}</CardTitle>
+                    )}
                     <CardDescription className="text-center">{item.institution}</CardDescription>
                   </CardHeader>
                   <CardContent>
