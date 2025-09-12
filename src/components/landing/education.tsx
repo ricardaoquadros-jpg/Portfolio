@@ -31,27 +31,25 @@ export function Education() {
           Minha jornada educacional na área de tecnologia.
         </p>
       </div>
-      <div className="relative max-w-xl mx-auto">
-        <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-border" aria-hidden="true"></div>
+      <div className="relative max-w-2xl mx-auto">
+        <div className="absolute left-0 top-0 h-full w-px ml-4 bg-border" aria-hidden="true"></div>
         <div className="space-y-8">
-          {educationData.map((item, index) => (
-            <div key={item.institution} className="relative flex items-center">
-               <div className={`flex-1 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8'}`}>
+          {educationData.map((item) => (
+            <div key={item.institution} className="relative flex items-start">
+              <div className="absolute top-0 left-0 -translate-x-1/2 bg-primary text-primary-foreground rounded-full p-2 border-4 border-background mt-4">
+                <GraduationCap className="h-6 w-6" />
+              </div>
+              <div className="flex-1 ml-12">
                  <Card className="w-full shadow-md hover:shadow-primary/20 transition-shadow">
-                  <CardHeader className="text-center">
-                    <CardTitle className="font-headline text-xl">{item.course}</CardTitle>
-                    <CardDescription>{item.institution}</CardDescription>
+                  <CardHeader>
+                    <CardTitle className="font-headline text-xl text-center">{item.course}</CardTitle>
+                    <CardDescription className="text-center">{item.institution}</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-foreground/70 text-right">{item.period}</p>
                   </CardContent>
                 </Card>
               </div>
-
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-primary-foreground rounded-full p-2 border-4 border-background">
-                <GraduationCap className="h-6 w-6" />
-              </div>
-
             </div>
           ))}
         </div>
