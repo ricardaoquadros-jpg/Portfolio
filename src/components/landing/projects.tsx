@@ -1,6 +1,7 @@
 import { Section } from "@/components/shared/section";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Github } from "lucide-react";
 import Image from "next/image";
@@ -45,15 +46,7 @@ export function Projects() {
             </div>
             <div className="md:w-2/3 flex flex-col">
               <CardHeader>
-                <div className="flex justify-between items-start">
-                  <CardTitle className="font-headline text-xl">{project.title}</CardTitle>
-                  {project.githubUrl && (
-                    <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <Github className="h-6 w-6 text-foreground/70 hover:text-primary transition-colors" />
-                      <span className="sr-only">GitHub</span>
-                    </Link>
-                  )}
-                </div>
+                  <CardTitle className="font-headline text-xl text-left">{project.title}</CardTitle>
               </CardHeader>
               <CardContent className="flex-grow">
                 <CardDescription className="mb-4 text-left">{project.description}</CardDescription>
@@ -63,6 +56,16 @@ export function Projects() {
                   ))}
                 </div>
               </CardContent>
+              <CardFooter>
+                 {project.githubUrl && (
+                    <Button asChild variant="outline">
+                        <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                            <Github className="mr-2 h-4 w-4" />
+                            Ver Repositório
+                        </Link>
+                    </Button>
+                )}
+              </CardFooter>
             </div>
           </Card>
         ))}
