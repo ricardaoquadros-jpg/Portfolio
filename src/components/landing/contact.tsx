@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Icons } from "@/components/icons";
 import Link from 'next/link';
 import { useToast } from "@/hooks/use-toast";
+import { cn } from "@/lib/utils";
 
 const contactInfo = [
   { type: "email", Icon: Icons.contact, text: "ricpiquadros@gmail.com", href: "mailto:ricpiquadros@gmail.com" },
@@ -57,7 +58,10 @@ export function Contact() {
               <ul className="space-y-6">
                 {contactInfo.map(({ type, Icon, text, href }) => (
                   <li key={text} className="flex items-center gap-4">
-                    <div className="bg-primary text-primary-foreground p-3 rounded-full">
+                    <div className={cn(
+                        "text-primary-foreground p-3 rounded-full",
+                        type === 'cv' ? 'bg-[#2a579a]' : 'bg-primary'
+                      )}>
                        <Icon className="h-5 w-5" />
                     </div>
                     {type === 'cv' ? (
