@@ -1,10 +1,25 @@
 import { Section } from "@/components/shared/section";
-import { Code } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { Github } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+
+const projectsData = [
+  {
+    title: "Portfólio Pessoal",
+    description: "Este é o próprio site que você está visitando, desenvolvido para mostrar minhas habilidades e projetos. Foi construído com tecnologias modernas, incluindo IA para priorização de competências.",
+    image: PlaceHolderImages.find(img => img.id === 'project-portfolio-v1'),
+    tags: ["Next.js", "React", "TailwindCSS", "ShadCN", "Genkit (AI)"],
+    githubUrl: "https://github.com",
+  }
+];
 
 export function Projects() {
   return (
     <Section id="projects" className="bg-card">
-      <div className="flex flex-col items-center text-center space-y-4">
+      <div className="flex flex-col items-center text-center space-y-4 mb-12">
         <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl text-primary">
           Projetos
         </h2>
@@ -12,14 +27,45 @@ export function Projects() {
           Uma seleção de projetos que demonstram minhas habilidades em desenvolvimento.
         </p>
       </div>
-      <div className="flex flex-col items-center justify-center text-center p-4 border-2 border-dashed border-border rounded-lg mt-10">
-        <Code className="h-8 w-8 text-muted-foreground mb-2" />
-        <h3 className="font-headline text-lg font-semibold mb-1">
-          Projetos em Desenvolvimento
-        </h3>
-        <p className="max-w-md text-muted-foreground text-sm">
-          Estou trabalhando em alguns projetos interessantes. Volte em breve para ver as novidades!
-        </p>
+
+      <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-8 max-w-3xl mx-auto">
+        {projectsData.map((project) => (
+          <Card key={project.title} className="overflow-hidden shadow-lg hover:shadow-primary/20 transition-all duration-300 flex flex-col md:flex-row">
+            <div className="md:w-1/3 relative">
+              {project.image && (
+                <Image
+                  src={project.image.imageUrl}
+                  alt={project.image.description}
+                  width={600}
+                  height={400}
+                  className="w-full h-full object-cover"
+                  data-ai-hint={project.image.imageHint}
+                />
+              )}
+            </div>
+            <div className="md:w-2/3 flex flex-col">
+              <CardHeader>
+                <div className="flex justify-between items-start">
+                  <CardTitle className="font-headline text-xl">{project.title}</CardTitle>
+                  {project.githubUrl && (
+                    <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                      <Github className="h-6 w-6 text-foreground/70 hover:text-primary transition-colors" />
+                      <span className="sr-only">GitHub</span>
+                    </Link>
+                  )}
+                </div>
+              </CardHeader>
+              <CardContent className="flex-grow">
+                <CardDescription className="mb-4 text-left">{project.description}</CardDescription>
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <Badge key={tag} variant="secondary">{tag}</Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </div>
+          </Card>
+        ))}
       </div>
     </Section>
   );

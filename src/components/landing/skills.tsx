@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 const allSkills = {
   "Linguagens de Programação": ["Python", "Java", "C", "HTML", "CSS", "PHP", "Assembly"],
   "Banco de Dados": ["MySQL"],
-  "Ferramentas e Tecnologias": ["Power BI", "Android Studio", "Pacote Office"],
+  "Ferramentas e Tecnologias": ["Power BI", "Android Studio", "Pacote Office", "Firebase", "AI"],
   "Hardware": ["Montagem e manutenção de computadores"],
 };
 
@@ -27,7 +27,7 @@ function SkillCategory({ title, skills }: { title: string; skills: string[] }) {
   };
 
   const getVariant = (skill: string) => {
-    if (["C", "MySQL", "Power BI", "Montagem e manutenção de computadores"].includes(skill)) return "default";
+    if (["C", "MySQL", "Power BI", "Montagem e manutenção de computadores", "Firebase", "AI"].includes(skill)) return "default";
     if (["CSS", "PHP", "Assembly", "Android Studio", "Pacote Office"].includes(skill)) {
       return "secondary";
     }
