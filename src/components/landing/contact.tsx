@@ -12,7 +12,7 @@ const contactInfo = [
   { type: "email", Icon: Icons.contact, text: "ricpiquadros@gmail.com", href: "mailto:ricpiquadros@gmail.com" },
   { type: "phone", Icon: Icons.phone, text: "(51) 99524-1338", href: "tel:+5551995241338" },
   { type: "location", Icon: Icons.location, text: "Guaíba – RS, Brasil", href: "https://pt.wikipedia.org/wiki/Gua%C3%ADba" },
-  { type: "cv", Icon: Icons.download, text: "Baixar Currículo", href: "/Ricardo-Quadros-CV.docx" },
+  { type: "cv", Icon: Icons.download, text: "Baixar Currículo", href: "https://docs.google.com/document/d/1bz_syLDndCEs0JT92XSdn1VsyBVwUvjg/export?format=docx" },
 ];
 
 export function Contact() {
