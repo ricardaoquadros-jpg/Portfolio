@@ -63,12 +63,12 @@ const getValorantStatsFlow = ai.defineFlow(
         }
       });
       
-      if (!response.ok) {
-        console.error(`API Error: ${response.status} ${response.statusText}`);
-        throw new Error(`Failed to fetch Valorant stats. Status: ${response.status}`);
-      }
-      
       const rawData = await response.json();
+
+      if (!response.ok) {
+        console.error(`API Error: ${response.status} ${response.statusText}`, rawData);
+        throw new Error(`Failed to fetch Valorant stats. Status: ${response.status}. Message: ${rawData.message || 'Unknown API error'}`);
+      }
 
       // The API response has a nested structure, so we parse it safely.
       const parsedData = ValorantApiMmrDataSchema.parse(rawData.data);
@@ -98,10 +98,10 @@ const getValorantStatsFlow = ai.defineFlow(
         winRate,
       };
 
-    } catch (error) {
+    } catch (error: any) {
       console.error('Error fetching or parsing Valorant stats:', error);
       // Fallback or re-throw error
-      throw new Error('Could not retrieve Valorant statistics.');
+      throw new Error(error.message || 'Could not retrieve Valorant statistics.');
     }
   }
 );
