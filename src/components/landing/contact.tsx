@@ -16,12 +16,12 @@ const contactInfo = [
 export function Contact() {
   const { toast } = useToast();
 
-  const handleCopy = (e: React.MouseEvent<HTMLAnchorElement>, textToCopy: string) => {
+  const handleCopy = (e: React.MouseEvent<HTMLAnchorElement>, textToCopy: string, type: 'email' | 'phone') => {
     e.preventDefault();
     navigator.clipboard.writeText(textToCopy);
     toast({
       title: "Copiado!",
-      description: "O endereço de e-mail foi copiado para a área de transferência.",
+      description: `O ${type === 'email' ? 'endereço de e-mail' : 'número de telefone'} foi copiado para a área de transferência.`,
     });
   };
 
@@ -59,11 +59,11 @@ export function Contact() {
                     <div className="bg-primary text-primary-foreground p-3 rounded-full">
                        <Icon className="h-5 w-5" />
                     </div>
-                    {type === 'email' ? (
+                    {type === 'email' || type === 'phone' ? (
                        <Link 
                          href={href} 
                          className="text-lg hover:underline"
-                         onContextMenu={(e) => handleCopy(e, text)}
+                         onContextMenu={(e) => handleCopy(e, text, type)}
                        >
                          {text}
                        </Link>
