@@ -8,7 +8,7 @@ const educationData = [
     institution: "Universidade Estadual do Rio Grande do Sul (UERGS)",
     course: "Engenharia da Computação",
     period: "2025 – Presente",
-    url: "#",
+    url: "https://www.uergs.edu.br/engenharia-de-computacao",
   },
   {
     institution: "Escola Estadual de Ensino Médio Dr. Solon Tavares",
