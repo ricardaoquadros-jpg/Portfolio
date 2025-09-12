@@ -32,7 +32,7 @@ export function Education() {
           Minha jornada educacional na área de tecnologia.
         </p>
       </div>
-      <div className="relative max-w-4xl mx-auto">
+      <div className="relative max-w-lg mx-auto">
         <div className="absolute left-0 top-0 h-full w-px ml-4 bg-border" aria-hidden="true"></div>
         <div className="space-y-8">
           {educationData.map((item) => (
