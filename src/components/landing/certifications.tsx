@@ -11,7 +11,7 @@ const certificationsData = [
 
 export function Certifications() {
   return (
-    <Section id="certifications" className="bg-card">
+    <Section id="certifications" className="bg-card pt-0">
       <div className="flex flex-col items-center text-center space-y-4 mb-12">
         <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl text-primary">
           Cursos e Certificações
