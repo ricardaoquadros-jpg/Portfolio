@@ -29,7 +29,7 @@ export function LanguagesAndQualities() {
                                 <span className="text-sm text-muted-foreground">{l.level}</span>
                             </div>
                             <div className="w-full bg-muted rounded-full h-2.5">
-                                <div className="bg-primary h-2.5 rounded-full" style={{ width: l.level.includes("C2") ? '100%' : '25%' }}></div>
+                                <div className="bg-primary h-2.5 rounded-full" style={{ width: l.level.includes("C2") ? '75%' : '25%' }}></div>
                             </div>
                         </div>
                     ))}
