@@ -24,7 +24,7 @@ export function LanguagesAndQualities() {
                 <div className="space-y-6">
                     {languages.map(l => (
                         <div key={l.lang}>
-                            <div className="flex justify-between mb-1">
+                            <div className="flex flex-col sm:flex-row justify-between mb-1">
                                 <span className="text-base font-medium text-foreground/90">{l.lang}</span>
                                 <span className="text-sm text-muted-foreground">{l.level}</span>
                             </div>

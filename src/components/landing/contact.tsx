@@ -59,23 +59,23 @@ export function Contact() {
                 {contactInfo.map(({ type, Icon, text, href }) => (
                   <li key={text} className="flex items-center gap-4">
                     <div className={cn(
-                        "text-primary-foreground p-3 rounded-full",
+                        "text-primary-foreground p-3 rounded-full flex-shrink-0",
                         type === 'cv' ? 'bg-[#2a579a]' : 'bg-primary'
                       )}>
                        <Icon className="h-5 w-5" />
                     </div>
                     {type === 'cv' ? (
-                      <a href={href} download className="text-lg hover:underline">{text}</a>
+                      <a href={href} download className="text-base md:text-lg hover:underline break-words">{text}</a>
                     ) : type === 'email' || type === 'phone' ? (
                        <Link 
                          href={href} 
-                         className="text-lg hover:underline"
+                         className="text-base md:text-lg hover:underline break-words"
                          onContextMenu={(e) => handleCopy(e, text, type as 'email' | 'phone')}
                        >
                          {text}
                        </Link>
                     ) : (
-                      <Link href={href} className="text-lg hover:underline" target={href.startsWith('http') ? '_blank' : undefined} rel={href.startsWith('http') ? "noopener noreferrer" : undefined}>
+                      <Link href={href} className="text-base md:text-lg hover:underline break-words" target={href.startsWith('http') ? '_blank' : undefined} rel={href.startsWith('http') ? "noopener noreferrer" : undefined}>
                           {text}
                       </Link>
                     )}
