@@ -2,8 +2,8 @@
   "placeholderImages": [
     {
       "id": "ricardo-quadros-avatar",
-      "description": "Minimalist avatar for Ricardo Quadros",
-      "imageUrl": "https://picsum.photos/seed/ricardo/400/400",
+      "description": "Avatar for Ricardo Quadros",
+      "imageUrl": "https://firebasestudio.googleapis.com/v0/b/firebase-studio-app.appspot.com/o/imagereader%2F883s2h39ap.png?alt=media&token=e11c9053-9a3c-4443-bf68-80f074a38343",
       "imageHint": "professional minimalist"
     }
   ]
