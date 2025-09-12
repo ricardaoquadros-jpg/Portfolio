@@ -74,7 +74,7 @@ export async function Skills() {
           Competências Técnicas
         </h2>
         <p className="max-w-[700px] text-foreground/80 md:text-xl">
-          Habilidades e tecnologias que domino, priorizadas por relevância e sofisticação através de IA.
+          Habilidades e tecnologias que domino, priorizadas por relevância e sofisticação.
         </p>
       </div>
       <div className="flex flex-wrap justify-center gap-6">
