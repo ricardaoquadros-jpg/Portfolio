@@ -33,9 +33,9 @@ export function Education() {
       </div>
       <div className="relative">
         <div className="absolute left-1/2 top-0 h-full w-px bg-border -translate-x-1/2 hidden md:block" aria-hidden="true"></div>
-        <div className="space-y-12 md:space-y-0 md:grid">
+        <div className="space-y-12 md:space-y-8">
           {educationData.map((item, index) => (
-            <div key={item.institution} className="relative grid md:grid-cols-2 md:gap-8 items-center md:mb-12">
+            <div key={item.institution} className="relative grid md:grid-cols-2 md:gap-8 items-center">
               <div className={`md:col-start-${index % 2 === 0 ? 1 : 2} md:row-start-1`}>
                 <div className={`flex w-full ${index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'}`}>
                   <Card className="w-full md:max-w-md shadow-md hover:shadow-primary/20 transition-shadow">
