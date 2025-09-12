@@ -5,8 +5,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
 const allSkills = {
-  "Linguagens de Programação": ["Python", "Java", "HTML"],
-  "Outras Linguagens": ["C", "PHP", "Assembly", "CSS"],
+  "Linguagens de Programação": ["Python", "Java", "C", "PHP", "CSS", "HTML"],
+  "Outras Linguagens": ["Assembly"],
   "Banco de Dados": ["MySQL"],
   "Ferramentas e Tecnologias": ["Power BI", "Android Studio", "Pacote Office"],
   "Hardware": ["Montagem e manutenção de computadores"],
