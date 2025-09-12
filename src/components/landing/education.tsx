@@ -33,12 +33,30 @@ export function Education() {
       </div>
       <div className="relative">
         <div className="absolute left-1/2 top-0 h-full w-px bg-border -translate-x-1/2 hidden md:block" aria-hidden="true"></div>
-        <div className="space-y-12 md:space-y-8">
+        <div className="space-y-8">
           {educationData.map((item, index) => (
-            <div key={item.institution} className="relative grid md:grid-cols-2 md:gap-8 items-center">
-              <div className={`md:col-start-${index % 2 === 0 ? 1 : 2} md:row-start-1`}>
-                <div className={`flex w-full ${index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'}`}>
-                  <Card className="w-full md:max-w-md shadow-md hover:shadow-primary/20 transition-shadow">
+            <div key={item.institution} className="relative grid md:grid-cols-2 md:gap-8 items-start">
+              <div className={`flex items-center gap-8 ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
+                <div className="hidden md:flex justify-center w-full">
+                  {index % 2 === 0 ? (
+                    <Card className="w-full max-w-md shadow-md hover:shadow-primary/20 transition-shadow">
+                      <CardHeader>
+                        <CardTitle className="font-headline text-xl">{item.course}</CardTitle>
+                        <CardDescription>{item.institution}</CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-sm text-foreground/70">{item.period}</p>
+                      </CardContent>
+                    </Card>
+                  ) : <div className="w-full max-w-md"></div>}
+                </div>
+
+                <div className="hidden md:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-primary-foreground rounded-full p-2 border-4 border-background">
+                  <GraduationCap className="h-6 w-6" />
+                </div>
+                
+                <div className="md:hidden w-full">
+                   <Card className="w-full max-w-md shadow-md hover:shadow-primary/20 transition-shadow">
                     <CardHeader>
                       <CardTitle className="font-headline text-xl">{item.course}</CardTitle>
                       <CardDescription>{item.institution}</CardDescription>
@@ -48,9 +66,20 @@ export function Education() {
                     </CardContent>
                   </Card>
                 </div>
-              </div>
-              <div className="hidden md:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-primary-foreground rounded-full p-2 border-4 border-background">
-                <GraduationCap className="h-6 w-6" />
+
+                <div className="hidden md:flex justify-center w-full">
+                  {index % 2 === 1 ? (
+                    <Card className="w-full max-w-md shadow-md hover:shadow-primary/20 transition-shadow">
+                      <CardHeader>
+                        <CardTitle className="font-headline text-xl">{item.course}</CardTitle>
+                        <CardDescription>{item.institution}</CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-sm text-foreground/70">{item.period}</p>
+                      </CardContent>
+                    </Card>
+                  ) : <div className="w-full max-w-md"></div>}
+                </div>
               </div>
             </div>
           ))}
