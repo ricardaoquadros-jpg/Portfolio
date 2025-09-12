@@ -27,6 +27,7 @@ function SkillCategory({ title, skills }: { title: string; skills: string[] }) {
   };
 
   const getVariant = (skill: string) => {
+    if (skill === "C") return "default";
     if (["CSS", "PHP", "Assembly"].includes(skill)) {
       return "secondary";
     }
