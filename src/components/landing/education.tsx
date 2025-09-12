@@ -1,6 +1,7 @@
 import { Section } from "@/components/shared/section";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { GraduationCap } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const educationData = [
   {
@@ -31,7 +32,7 @@ export function Education() {
           Minha jornada educacional na área de tecnologia.
         </p>
       </div>
-      <div className="relative max-w-2xl mx-auto">
+      <div className="relative max-w-4xl mx-auto">
         <div className="absolute left-0 top-0 h-full w-px ml-4 bg-border" aria-hidden="true"></div>
         <div className="space-y-8">
           {educationData.map((item) => (
