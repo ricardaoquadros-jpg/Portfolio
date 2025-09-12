@@ -1,3 +1,10 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "ricardo-quadros-avatar",
+      "description": "Minimalist avatar for Ricardo Quadros",
+      "imageUrl": "https://picsum.photos/seed/ricardo/400/400",
+      "imageHint": "professional minimalist"
+    }
+  ]
 }

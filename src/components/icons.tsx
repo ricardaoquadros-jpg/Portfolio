@@ -1,0 +1,36 @@
+import {
+  Briefcase,
+  GraduationCap,
+  Home,
+  Mail,
+  User,
+  Code,
+  Award,
+  Languages,
+  Sparkles,
+  Phone,
+  MapPin,
+  Linkedin,
+  Github,
+  ChevronRight,
+  type LucideIcon,
+} from 'lucide-react';
+
+export type Icon = LucideIcon;
+
+export const Icons = {
+  home: Home,
+  about: User,
+  experience: Briefcase,
+  education: GraduationCap,
+  skills: Code,
+  certifications: Award,
+  languages: Languages,
+  qualities: Sparkles,
+  contact: Mail,
+  phone: Phone,
+  location: MapPin,
+  linkedin: Linkedin,
+  github: Github,
+  right: ChevronRight,
+};
