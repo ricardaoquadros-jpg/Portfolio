@@ -1,4 +1,4 @@
-import { prioritizeSkills } from "@/ai/flows/prioritize-skills-relevance";
+
 import { Section } from "@/components/shared/section";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -11,24 +11,16 @@ const allSkills = {
   "Hardware": ["Montagem e manutenção de computadores"],
 };
 
-async function SkillCategory({ title, skills }: { title: string; skills: string[] }) {
+function SkillCategory({ title, skills }: { title: string; skills: string[] }) {
   if (skills.length === 0) return null;
 
-  let prioritizedSkills = skills;
-  try {
-    if (skills.length > 1) {
-      const result = await prioritizeSkills({ skills });
-      prioritizedSkills = result.prioritizedSkills;
-    }
-  } catch (error) {
-    console.error(`Error prioritizing skills for category "${title}":`, error);
-    // In case of an error, we'll just use the original skill order.
-    prioritizedSkills = skills;
-  }
+  // AI prioritization is temporarily disabled to avoid rate limiting issues.
+  const prioritizedSkills = skills;
   
   const getSkillEmphasis = (skill: string) => {
     const index = prioritizedSkills.indexOf(skill);
     if (index === -1) return "default";
+    // Simplified emphasis without AI for now
     if (index < skills.length / 3) return "top";
     if (index < (skills.length * 2) / 3) return "middle";
     return "bottom";
@@ -66,7 +58,7 @@ async function SkillCategory({ title, skills }: { title: string; skills: string[
   );
 }
 
-export async function Skills() {
+export function Skills() {
   return (
     <Section id="skills">
       <div className="flex flex-col items-center text-center space-y-4 mb-12">
