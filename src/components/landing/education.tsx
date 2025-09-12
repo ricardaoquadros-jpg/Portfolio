@@ -31,14 +31,14 @@ export function Education() {
           Minha jornada educacional na área de tecnologia.
         </p>
       </div>
-      <div className="relative max-w-4xl mx-auto">
-        <div className="absolute left-1/2 top-0 h-full w-px bg-border -translate-x-1/2" aria-hidden="true"></div>
+      <div className="relative max-w-2xl mx-auto">
+        <div className="absolute left-0 top-0 h-full w-px bg-border" aria-hidden="true"></div>
         <div className="space-y-8">
           {educationData.map((item) => (
-            <div key={item.institution} className="relative grid grid-cols-1 md:grid-cols-2 md:gap-8 items-center">
-              <div className="md:col-start-1 md:text-right w-full">
+            <div key={item.institution} className="relative flex items-center">
+               <div className="flex-1 pl-8">
                  <Card className="w-full shadow-md hover:shadow-primary/20 transition-shadow">
-                  <CardHeader>
+                  <CardHeader className="text-center">
                     <CardTitle className="font-headline text-xl">{item.course}</CardTitle>
                     <CardDescription>{item.institution}</CardDescription>
                   </CardHeader>
@@ -48,11 +48,10 @@ export function Education() {
                 </Card>
               </div>
 
-              <div className="hidden md:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-primary-foreground rounded-full p-2 border-4 border-background">
+              <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 bg-primary text-primary-foreground rounded-full p-2 border-4 border-background">
                 <GraduationCap className="h-6 w-6" />
               </div>
 
-              <div className="hidden md:block"></div>
             </div>
           ))}
         </div>
