@@ -15,16 +15,39 @@ function SkillCategory({ title, skills }: { title: string; skills: string[] }) {
   if (skills.length === 0) return null;
 
   // AI prioritization is temporarily disabled to avoid rate limiting issues.
-  const prioritizedSkills = skills;
+  const prioritizedSkills = ["Python", "Java", "HTML", "CSS", "PHP", "Assembly", "C"];
   
   const getSkillEmphasis = (skill: string) => {
     const index = prioritizedSkills.indexOf(skill);
     if (index === -1) return "default";
     // Simplified emphasis without AI for now
-    if (index < skills.length / 3) return "top";
-    if (index < (skills.length * 2) / 3) return "middle";
-    return "bottom";
+    if (index < 2) return "top"; // Python, Java
+    if (index < 6) return "middle"; // HTML, CSS, PHP, Assembly
+    return "bottom"; // C
   };
+
+  const getVariant = (skill: string) => {
+    if (["CSS", "PHP", "Assembly"].includes(skill)) {
+      return "secondary";
+    }
+    const emphasis = getSkillEmphasis(skill);
+    if (emphasis === 'top') return 'default';
+    if (emphasis === 'middle') return 'secondary';
+    return 'outline';
+  }
+
+  // Use a consistent sort order for display purposes
+  const displaySkills = [...skills].sort((a, b) => {
+    const aVariant = getVariant(a);
+    const bVariant = getVariant(b);
+    if (aVariant === bVariant) return a.localeCompare(b);
+    if (aVariant === 'default') return -1;
+    if (bVariant === 'default') return 1;
+    if (aVariant === 'secondary') return -1;
+    if (bVariant === 'secondary') return 1;
+    return 0;
+  });
+
 
   return (
     <Card className="flex-1 min-w-[280px] bg-background/50">
@@ -33,19 +56,18 @@ function SkillCategory({ title, skills }: { title: string; skills: string[] }) {
       </CardHeader>
       <CardContent>
         <div className="flex flex-wrap gap-2">
-          {prioritizedSkills.map((skill) => {
-            const emphasis = getSkillEmphasis(skill);
+          {skills.map((skill) => {
+            const variant = getVariant(skill);
+            const isTop = variant === 'default';
+            
             return (
               <Badge
                 key={skill}
-                variant={
-                  emphasis === "top" ? "default" : 
-                  emphasis === "middle" ? "secondary" : "outline"
-                }
+                variant={variant}
                 className={cn("transition-all", {
-                  "text-base px-4 py-1 shadow-md scale-105": emphasis === "top",
-                  "text-sm": emphasis === "middle",
-                  "font-normal": emphasis === "bottom",
+                  "text-base px-4 py-1 shadow-md scale-105": isTop,
+                  "text-sm": variant === 'secondary',
+                  "font-normal": variant === 'outline',
                 })}
               >
                 {skill}
