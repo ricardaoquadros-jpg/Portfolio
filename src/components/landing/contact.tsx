@@ -7,7 +7,7 @@ import Link from 'next/link';
 const contactInfo = [
   { Icon: Icons.contact, text: "ricpiquadros@gmail.com", href: "mailto:ricpiquadros@gmail.com" },
   { Icon: Icons.phone, text: "(51) 99524-1338", href: "tel:+5551995241338" },
-  { Icon: Icons.location, text: "Guaíba – RS, Brasil", href: "#" },
+  { Icon: Icons.location, text: "Guaíba – RS, Brasil", href: "https://pt.wikipedia.org/wiki/Gua%C3%ADba" },
 ];
 
 export function Contact() {
@@ -45,7 +45,7 @@ export function Contact() {
                     <div className="bg-primary text-primary-foreground p-3 rounded-full">
                        <Icon className="h-5 w-5" />
                     </div>
-                    <Link href={href} className="text-lg hover:underline" target={href.startsWith('http') || href.startsWith('mailto') || href.startsWith('tel') ? '_self' : undefined} rel={href.startsWith('http') ? "noopener noreferrer" : undefined}>
+                    <Link href={href} className="text-lg hover:underline" target={href.startsWith('http') ? '_blank' : undefined} rel={href.startsWith('http') ? "noopener noreferrer" : undefined}>
                         {text}
                     </Link>
                   </li>
