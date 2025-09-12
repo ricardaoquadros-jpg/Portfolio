@@ -1,16 +1,30 @@
+"use client";
+
 import { Section } from "@/components/shared/section";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Icons } from "@/components/icons";
 import Link from 'next/link';
+import { useToast } from "@/hooks/use-toast";
 
 const contactInfo = [
-  { Icon: Icons.contact, text: "ricpiquadros@gmail.com", href: "mailto:ricpiquadros@gmail.com" },
-  { Icon: Icons.phone, text: "(51) 99524-1338", href: "tel:+5551995241338" },
-  { Icon: Icons.location, text: "Guaíba – RS, Brasil", href: "https://pt.wikipedia.org/wiki/Gua%C3%ADba" },
+  { type: "email", Icon: Icons.contact, text: "ricpiquadros@gmail.com", href: "mailto:ricpiquadros@gmail.com" },
+  { type: "phone", Icon: Icons.phone, text: "(51) 99524-1338", href: "tel:+5551995241338" },
+  { type: "location", Icon: Icons.location, text: "Guaíba – RS, Brasil", href: "https://pt.wikipedia.org/wiki/Gua%C3%ADba" },
 ];
 
 export function Contact() {
+  const { toast } = useToast();
+
+  const handleCopy = (e: React.MouseEvent<HTMLAnchorElement>, textToCopy: string) => {
+    e.preventDefault();
+    navigator.clipboard.writeText(textToCopy);
+    toast({
+      title: "Copiado!",
+      description: "O endereço de e-mail foi copiado para a área de transferência.",
+    });
+  };
+
   return (
     <Section id="contact" className="bg-card">
       <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -40,14 +54,24 @@ export function Contact() {
           <Card className="bg-primary/5 border-primary shadow-lg">
             <CardContent className="p-6 md:p-8">
               <ul className="space-y-6">
-                {contactInfo.map(({ Icon, text, href }) => (
+                {contactInfo.map(({ type, Icon, text, href }) => (
                   <li key={text} className="flex items-center gap-4">
                     <div className="bg-primary text-primary-foreground p-3 rounded-full">
                        <Icon className="h-5 w-5" />
                     </div>
-                    <Link href={href} className="text-lg hover:underline" target={href.startsWith('http') ? '_blank' : undefined} rel={href.startsWith('http') ? "noopener noreferrer" : undefined}>
-                        {text}
-                    </Link>
+                    {type === 'email' ? (
+                       <Link 
+                         href={href} 
+                         className="text-lg hover:underline"
+                         onContextMenu={(e) => handleCopy(e, text)}
+                       >
+                         {text}
+                       </Link>
+                    ) : (
+                      <Link href={href} className="text-lg hover:underline" target={href.startsWith('http') ? '_blank' : undefined} rel={href.startsWith('http') ? "noopener noreferrer" : undefined}>
+                          {text}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
