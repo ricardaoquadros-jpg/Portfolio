@@ -4,6 +4,7 @@ import { About } from "@/components/landing/about";
 import { Education } from "@/components/landing/education";
 import { Experience } from "@/components/landing/experience";
 import { Skills } from "@/components/landing/skills";
+import { Projects } from "@/components/landing/projects";
 import { Certifications } from "@/components/landing/certifications";
 import { LanguagesAndQualities } from "@/components/landing/languages-and-qualities";
 import { Contact } from "@/components/landing/contact";
@@ -19,6 +20,7 @@ export default function Home() {
         <Education />
         <Experience />
         <Skills />
+        <Projects />
         <Certifications />
         <LanguagesAndQualities />
         <Contact />

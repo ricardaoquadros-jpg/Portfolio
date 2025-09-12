@@ -5,6 +5,24 @@
       "description": "Avatar for Ricardo Quadros",
       "imageUrl": "https://firebasestudio.googleapis.com/v0/b/firebase-studio-app.appspot.com/o/imagereader%2Fj2e4xhm5w.png?alt=media&token=425a8157-195b-4ac5-b541-11818bd22a07",
       "imageHint": "profile picture"
+    },
+    {
+      "id": "project-portfolio-v1",
+      "description": "Screenshot of portfolio project",
+      "imageUrl": "https://picsum.photos/seed/project1/600/400",
+      "imageHint": "website screenshot"
+    },
+    {
+      "id": "project-task-manager",
+      "description": "Screenshot of task manager project",
+      "imageUrl": "https://picsum.photos/seed/project2/600/400",
+      "imageHint": "app interface"
+    },
+    {
+      "id": "project-ecommerce-platform",
+      "description": "Screenshot of e-commerce project",
+      "imageUrl": "https://picsum.photos/seed/project3/600/400",
+      "imageHint": "online store"
     }
   ]
 }

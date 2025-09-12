@@ -13,6 +13,7 @@ import {
   Linkedin,
   Github,
   ChevronRight,
+  Projector,
   type LucideIcon,
 } from 'lucide-react';
 
@@ -24,6 +25,7 @@ export const Icons = {
   experience: Briefcase,
   education: GraduationCap,
   skills: Code,
+  projects: Projector,
   certifications: Award,
   languages: Languages,
   qualities: Sparkles,
