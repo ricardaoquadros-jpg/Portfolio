@@ -20,6 +20,7 @@ const educationData = [
     institution: "Colégio Estadual Augusto Meyer",
     course: "Ensino Médio",
     period: "2022 – 2024",
+    url: "https://www.escol.as/245742-colegio-estadual-augusto-meyer",
   },
 ];
 
