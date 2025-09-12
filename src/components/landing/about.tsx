@@ -25,10 +25,10 @@ export function About() {
             Sobre Mim
           </h2>
           <div className="space-y-4 text-lg text-foreground/80">
-            <p>
+            <p className="indent-8 text-justify">
               Olá! Sou Ricardo Quadros, um jovem de 18 anos apaixonado por tecnologia, residente em Guaíba, Rio Grande do Sul.
             </p>
-            <p>
+            <p className="indent-8 text-justify">
               Atualmente, estou imerso no mundo da Engenharia da Computação, sempre em busca de novos conhecimentos e desafios. Meu principal objetivo é construir uma carreira sólida na área de tecnologia, aplicando minhas habilidades para criar soluções inovadoras e eficientes.
             </p>
           </div>
