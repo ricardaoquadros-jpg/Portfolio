@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const certificationsData = [
   { name: "Power BI", institution: "Fundação Bradesco", url: "https://www.ev.org.br/cursos/preparando-dados-para-analise-microsoft-power-bi" },
-  { name: "Python Básico", institution: "Fundação Bradesco", url: "#" },
+  { name: "Python Básico", institution: "Fundação Bradesco", url: "https://www.ev.org.br/cursos/linguagem-de-programacao-python-basico" },
   { name: "HTML5", institution: "IFRS", url: "#" },
   { name: "EF SET English Certificate C2", institution: "EF Standard English Test", url: "#" },
 ];
