@@ -4,7 +4,7 @@ import { Award } from "lucide-react";
 import Link from "next/link";
 
 const certificationsData = [
-  { name: "Power BI", institution: "Fundação Bradesco", url: "#" },
+  { name: "Power BI", institution: "Fundação Bradesco", url: "https://www.ev.org.br/cursos/preparando-dados-para-analise-microsoft-power-bi" },
   { name: "Python Básico", institution: "Fundação Bradesco", url: "#" },
   { name: "HTML5", institution: "IFRS", url: "#" },
   { name: "EF SET English Certificate C2", institution: "EF Standard English Test", url: "#" },
