@@ -7,7 +7,7 @@ const educationData = [
   {
     institution: "Universidade Estadual do Rio Grande do Sul (UERGS)",
     course: "Engenharia da Computação",
-    period: "2025 – 2030",
+    period: "2025 – Presente",
   },
   {
     institution: "Escola Estadual de Ensino Médio Dr. Solon Tavares",
