@@ -9,6 +9,7 @@ import { Certifications } from "@/components/landing/certifications";
 import { LanguagesAndQualities } from "@/components/landing/languages-and-qualities";
 import { Contact } from "@/components/landing/contact";
 import { Footer } from "@/components/landing/footer";
+import { ValorantStats } from "@/components/landing/valorant-stats";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <Experience />
         <Skills />
         <Projects />
+        <ValorantStats />
         <Certifications />
         <LanguagesAndQualities />
         <Contact />
