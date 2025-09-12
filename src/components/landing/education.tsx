@@ -34,52 +34,27 @@ export function Education() {
       <div className="relative">
         <div className="absolute left-1/2 top-0 h-full w-px bg-border -translate-x-1/2 hidden md:block" aria-hidden="true"></div>
         <div className="space-y-8">
-          {educationData.map((item, index) => (
+          {educationData.map((item) => (
             <div key={item.institution} className="relative grid md:grid-cols-2 md:gap-8 items-start">
-              <div className={`flex items-center gap-8 ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
-                <div className="hidden md:flex justify-center w-full">
-                  {index % 2 === 0 ? (
-                    <Card className="w-full max-w-md shadow-md hover:shadow-primary/20 transition-shadow">
-                      <CardHeader>
-                        <CardTitle className="font-headline text-xl">{item.course}</CardTitle>
-                        <CardDescription>{item.institution}</CardDescription>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-sm text-foreground/70">{item.period}</p>
-                      </CardContent>
-                    </Card>
-                  ) : <div className="w-full max-w-md"></div>}
-                </div>
+              {/* Div vazia para o lado esquerdo no desktop */}
+              <div className="hidden md:block"></div>
 
-                <div className="hidden md:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-primary-foreground rounded-full p-2 border-4 border-background">
-                  <GraduationCap className="h-6 w-6" />
-                </div>
-                
-                <div className="md:hidden w-full">
-                   <Card className="w-full max-w-md shadow-md hover:shadow-primary/20 transition-shadow">
-                    <CardHeader>
-                      <CardTitle className="font-headline text-xl">{item.course}</CardTitle>
-                      <CardDescription>{item.institution}</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-sm text-foreground/70">{item.period}</p>
-                    </CardContent>
-                  </Card>
-                </div>
+              {/* Ícone no centro */}
+              <div className="hidden md:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-primary-foreground rounded-full p-2 border-4 border-background">
+                <GraduationCap className="h-6 w-6" />
+              </div>
 
-                <div className="hidden md:flex justify-center w-full">
-                  {index % 2 === 1 ? (
-                    <Card className="w-full max-w-md shadow-md hover:shadow-primary/20 transition-shadow">
-                      <CardHeader>
-                        <CardTitle className="font-headline text-xl">{item.course}</CardTitle>
-                        <CardDescription>{item.institution}</CardDescription>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-sm text-foreground/70">{item.period}</p>
-                      </CardContent>
-                    </Card>
-                  ) : <div className="w-full max-w-md"></div>}
-                </div>
+              {/* Card no lado direito */}
+              <div className="w-full">
+                 <Card className="w-full max-w-md shadow-md hover:shadow-primary/20 transition-shadow">
+                  <CardHeader>
+                    <CardTitle className="font-headline text-xl">{item.course}</CardTitle>
+                    <CardDescription>{item.institution}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-foreground/70">{item.period}</p>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           ))}
