@@ -59,7 +59,8 @@ const getValorantStatsFlow = ai.defineFlow(
       const url = `https://api.henrikdev.xyz/valorant/v2/mmr/br/${name}/${tag}`;
       const response = await fetch(url, {
         headers: {
-          'Accept': 'application/json'
+          'Accept': 'application/json',
+          'Authorization': `${process.env.VALORANT_API_KEY}`
         }
       });
       
