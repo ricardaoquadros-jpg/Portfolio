@@ -11,6 +11,7 @@ const contactInfo = [
   { type: "email", Icon: Icons.contact, text: "ricpiquadros@gmail.com", href: "mailto:ricpiquadros@gmail.com" },
   { type: "phone", Icon: Icons.phone, text: "(51) 99524-1338", href: "tel:+5551995241338" },
   { type: "location", Icon: Icons.location, text: "Guaíba – RS, Brasil", href: "https://pt.wikipedia.org/wiki/Gua%C3%ADba" },
+  { type: "cv", Icon: Icons.download, text: "Baixar Currículo", href: "/Ricardo-Quadros-CV.docx" },
 ];
 
 export function Contact() {
@@ -59,11 +60,13 @@ export function Contact() {
                     <div className="bg-primary text-primary-foreground p-3 rounded-full">
                        <Icon className="h-5 w-5" />
                     </div>
-                    {type === 'email' || type === 'phone' ? (
+                    {type === 'cv' ? (
+                      <a href={href} download className="text-lg hover:underline">{text}</a>
+                    ) : type === 'email' || type === 'phone' ? (
                        <Link 
                          href={href} 
                          className="text-lg hover:underline"
-                         onContextMenu={(e) => handleCopy(e, text, type)}
+                         onContextMenu={(e) => handleCopy(e, text, type as 'email' | 'phone')}
                        >
                          {text}
                        </Link>

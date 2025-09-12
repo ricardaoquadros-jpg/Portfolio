@@ -14,6 +14,7 @@ import {
   Github,
   ChevronRight,
   Projector,
+  Download,
   type LucideIcon,
 } from 'lucide-react';
 
@@ -35,4 +36,5 @@ export const Icons = {
   linkedin: Linkedin,
   github: Github,
   right: ChevronRight,
+  download: Download,
 };
