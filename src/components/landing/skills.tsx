@@ -28,7 +28,7 @@ function SkillCategory({ title, skills }: { title: string; skills: string[] }) {
 
   const getVariant = (skill: string) => {
     if (["C", "MySQL", "Power BI", "Montagem e manutenção de computadores"].includes(skill)) return "default";
-    if (["CSS", "PHP", "Assembly"].includes(skill)) {
+    if (["CSS", "PHP", "Assembly", "Android Studio", "Pacote Office"].includes(skill)) {
       return "secondary";
     }
     const emphasis = getSkillEmphasis(skill);
