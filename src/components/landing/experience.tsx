@@ -12,6 +12,11 @@ const experienceData = {
     "Manutenção de Computadores",
     "Gerenciamento de Redes",
     "Atendimento a Usuários",
+    "Configuração de Computadores e Impressoras",
+    "Cabeamento",
+    "Instalação de Software",
+    "Reset de Senhas",
+    "Atividades Pertinentes à Área",
   ],
 };
 
