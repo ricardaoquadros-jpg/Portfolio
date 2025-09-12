@@ -26,14 +26,18 @@ function SkillCategory({ title, skills }: { title: string; skills: string[] }) {
     return "bottom"; // C
   };
 
-  const getVariant = (skill: string) => {
-    if (["C", "MySQL", "Power BI", "Montagem e manutenção de computadores", "Firebase", "AI"].includes(skill)) return "default";
-    if (["CSS", "PHP", "Assembly", "Android Studio", "Pacote Office"].includes(skill)) {
-      return "secondary";
-    }
+  const getVariant = (skill: string): 'default' | 'secondary' | 'outline' => {
     const emphasis = getSkillEmphasis(skill);
-    if (emphasis === 'top') return 'default';
-    if (emphasis === 'middle') return 'secondary';
+    if (emphasis === 'top') return 'default'; // Python, Java
+
+    if (["Firebase", "AI", "MySQL", "Montagem e manutenção de computadores", "Power BI", "C"].includes(skill)) {
+      return 'default';
+    }
+
+    if (["HTML", "CSS", "PHP", "Android Studio", "Pacote Office", "Assembly"].includes(skill)) {
+      return 'secondary';
+    }
+    
     return 'outline';
   }
 
@@ -41,7 +45,9 @@ function SkillCategory({ title, skills }: { title: string; skills: string[] }) {
   const displaySkills = [...skills].sort((a, b) => {
     const aVariant = getVariant(a);
     const bVariant = getVariant(b);
-    if (aVariant === bVariant) return a.localeCompare(b);
+    if (aVariant === bVariant) {
+        return a.localeCompare(b);
+    }
     if (aVariant === 'default') return -1;
     if (bVariant === 'default') return 1;
     if (aVariant === 'secondary') return -1;
@@ -57,7 +63,7 @@ function SkillCategory({ title, skills }: { title: string; skills: string[] }) {
       </CardHeader>
       <CardContent>
         <div className="flex flex-wrap gap-2">
-          {skills.map((skill) => {
+          {displaySkills.map((skill) => {
             const variant = getVariant(skill);
             const isTop = variant === 'default';
             
