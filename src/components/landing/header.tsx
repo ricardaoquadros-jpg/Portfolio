@@ -63,7 +63,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        <div className="flex-1 md:flex-none">
+        <div className="flex items-center justify-start w-1/3">
           <Link href="#" className="flex items-center gap-2">
             <Logo />
             <span className="hidden sm:inline font-bold font-headline">Ricardo Quadros</span>
@@ -72,7 +72,7 @@ export function Header() {
         <div className="flex-1 hidden md:flex justify-center">
             <NavContent />
         </div>
-        <div className="flex-1 flex justify-end items-center">
+        <div className="flex items-center justify-end w-1/3">
             <Button onClick={toggleLanguage} variant="ghost" size="sm" className="mr-2">
                 {language === 'pt-BR' ? 'EN' : 'PT'}
             </Button>
