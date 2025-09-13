@@ -20,7 +20,7 @@ export function About() {
                 alt={avatar.description}
                 width={250}
                 height={250}
-                className="rounded-full object-cover border-4 border-primary shadow-lg"
+                className="rounded-lg object-cover border-4 border-primary shadow-lg"
                 data-ai-hint={avatar.imageHint}
               />
             )}
