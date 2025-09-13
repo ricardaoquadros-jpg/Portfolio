@@ -1,5 +1,5 @@
 "use client";
-
+import React from "react";
 import { Section } from "@/components/shared/section";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -9,6 +9,20 @@ import { Github } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/context/language-context";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+import Autoplay from "embla-carousel-autoplay"
+
+const portfolioImages = [
+    "https://i.imgur.com/FzXWSsB.jpeg",
+    "https://i.imgur.com/4U2FjLL.jpeg",
+    "https://i.imgur.com/la6cDsx.jpeg",
+];
 
 export function Projects() {
   const { language, translations } = useLanguage();
@@ -29,7 +43,34 @@ export function Projects() {
         {projectsContent.items.map((project) => (
           <Card key={project.title} className="overflow-hidden shadow-lg hover:shadow-primary/20 transition-all duration-300 flex flex-col md:flex-row">
             <div className="md:w-1/3 relative">
-              {project.image && (
+              {project.title === "Portfólio Pessoal" || project.title === "Personal Portfolio" ? (
+                 <Carousel 
+                    className="w-full h-full"
+                    plugins={[
+                        Autoplay({
+                          delay: 2000,
+                          stopOnInteraction: true,
+                        }),
+                    ]}
+                 >
+                    <CarouselContent>
+                        {portfolioImages.map((src, index) => (
+                        <CarouselItem key={index}>
+                            <div className="relative w-full h-full aspect-square md:aspect-auto">
+                                <Image
+                                    src={src}
+                                    alt={`${project.title} - Imagem ${index + 1}`}
+                                    fill
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                        </CarouselItem>
+                        ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="left-2" />
+                    <CarouselNext className="right-2" />
+                </Carousel>
+              ) : project.image && (
                 <Link href="/projects" className="block w-full h-full">
                   <Image
                     src={project.image.imageUrl}
