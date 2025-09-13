@@ -15,14 +15,16 @@ export function About() {
       <div className="grid md:grid-cols-3 gap-8 md:gap-12 items-center">
         <div className="md:col-span-1 flex justify-center">
             {avatar && (
-              <Image
-                src={avatar.imageUrl}
-                alt={avatar.description}
-                width={250}
-                height={250}
-                className="rounded-lg object-cover border-4 border-primary shadow-lg"
-                data-ai-hint={avatar.imageHint}
-              />
+              <div className="relative group">
+                <Image
+                  src={avatar.imageUrl}
+                  alt={avatar.description}
+                  width={250}
+                  height={250}
+                  className="rounded-lg object-cover border-2 border-primary shadow-lg transition-transform duration-300 group-hover:scale-105"
+                  data-ai-hint={avatar.imageHint}
+                />
+              </div>
             )}
         </div>
         <div className="md:col-span-2 space-y-4">
