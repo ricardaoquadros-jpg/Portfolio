@@ -53,9 +53,7 @@ export function Header() {
         <Link
           key={href}
           href={href}
-          className={cn("text-foreground/80 hover:text-foreground transition-colors", {
-            "whitespace-nowrap": language === "pt-BR"
-          })}
+          className="text-foreground/80 hover:text-foreground transition-colors whitespace-nowrap"
           onClick={() => setIsOpen(false)}
         >
           {label}
