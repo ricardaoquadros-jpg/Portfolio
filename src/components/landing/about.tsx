@@ -17,7 +17,6 @@ export function About() {
             {avatar && (
               <div className="relative group w-full max-w-[350px] mx-auto rounded-lg overflow-hidden border-2 border-primary shadow-lg">
                 <div className="aspect-square relative">
-                  <div className="absolute inset-0 bg-background/50 group-hover:bg-background/80 transition-colors duration-300 z-10"></div>
                   <Image
                     src={avatar.imageUrl}
                     alt={avatar.description}
