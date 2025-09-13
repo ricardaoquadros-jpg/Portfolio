@@ -9,26 +9,10 @@ import { Github } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/context/language-context";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel"
-import Autoplay from "embla-carousel-autoplay"
-
-const portfolioImages = [
-  "https://i.imgur.com/FzXWSsB.jpeg",
-  "https://i.imgur.com/4U2FjLL.jpeg",
-  "https://i.imgur.com/la6cDsx.jpeg"
-];
 
 export function Projects() {
   const { language, translations } = useLanguage();
   const projectsContent = translations[language].projects;
-
-  const autoplay = React.useRef(
-    Autoplay({ delay: 1500, stopOnInteraction: true })
-  )
 
   return (
     <Section id="projects" className="bg-card">
@@ -44,36 +28,13 @@ export function Projects() {
       <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-8 max-w-3xl mx-auto">
         {projectsContent.items.map((project) => (
           <Card key={project.title} className="overflow-hidden shadow-lg hover:shadow-primary/20 transition-all duration-300 flex flex-col md:flex-row">
-            <div className="md:w-1/3 relative">
-              {project.title === "Portfólio Pessoal" || project.title === "Personal Portfolio" ? (
-                <Carousel
-                  plugins={[autoplay.current]}
-                  className="w-full h-full"
-                  onMouseEnter={autoplay.current.stop}
-                  onMouseLeave={autoplay.current.reset}
-                >
-                  <CarouselContent className="-ml-0 h-full">
-                    {portfolioImages.map((src, index) => (
-                      <CarouselItem key={index} className="pl-0">
-                        <div className="relative w-full h-full aspect-square md:aspect-auto">
-                          <Image
-                            src={src}
-                            alt={`${project.title} screenshot ${index + 1}`}
-                            fill
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                </Carousel>
-              ) : project.image && (
+            <div className="md:w-1/3 relative h-64 md:h-auto">
+              {project.image && (
                 <Link href="/projects" className="block w-full h-full">
                   <Image
                     src={project.image.imageUrl}
                     alt={project.image.description}
-                    width={600}
-                    height={400}
+                    fill
                     className="w-full h-full object-cover"
                     data-ai-hint={project.image.imageHint}
                   />
