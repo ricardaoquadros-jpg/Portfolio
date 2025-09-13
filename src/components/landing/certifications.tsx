@@ -23,11 +23,11 @@ export function Certifications() {
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {certificationsData.map((cert) => (
-          <Link key={cert.name} href={cert.url} target="_blank" rel="noopener noreferrer" className="block">
-            <Card className="text-center hover:border-primary transition-colors hover:shadow-lg h-full">
+          <Link key={cert.name} href={cert.url} target="_blank" rel="noopener noreferrer" className="block group">
+            <Card className="text-center group-hover:border-primary transition-colors group-hover:shadow-lg h-full">
               <CardHeader>
                 <div className="mx-auto bg-muted p-3 rounded-full w-fit">
-                  <Award className="h-6 w-6 text-primary" />
+                  <Award className="h-6 w-6 text-primary transition-transform duration-300 group-hover:scale-110" />
                 </div>
               </CardHeader>
               <CardContent className="flex flex-col items-center justify-center">
