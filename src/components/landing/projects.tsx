@@ -34,14 +34,16 @@ export function Projects() {
           <Card key={project.title} className="overflow-hidden shadow-lg hover:shadow-primary/20 transition-all duration-300 flex flex-col md:flex-row">
             <div className="md:w-1/3 relative">
               {project.image && (
-                <Image
-                  src={project.image.imageUrl}
-                  alt={project.image.description}
-                  width={600}
-                  height={400}
-                  className="w-full h-full object-cover"
-                  data-ai-hint={project.image.imageHint}
-                />
+                <Link href="/projects" className="block w-full h-full">
+                  <Image
+                    src={project.image.imageUrl}
+                    alt={project.image.description}
+                    width={600}
+                    height={400}
+                    className="w-full h-full object-cover"
+                    data-ai-hint={project.image.imageHint}
+                  />
+                </Link>
               )}
             </div>
             <div className="md:w-2/3 flex flex-col">
