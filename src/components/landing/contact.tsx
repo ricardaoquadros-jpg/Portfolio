@@ -41,9 +41,15 @@ export function Contact() {
               </Link>
             </Button>
             <Button asChild variant="ghost" size="icon" className="hover:bg-primary/20">
-              <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <Link href="https://github.com/ricardoquadross" target="_blank" rel="noopener noreferrer">
                 <Icons.github className="h-6 w-6 text-primary"/>
                 <span className="sr-only">GitHub</span>
+              </Link>
+            </Button>
+            <Button asChild variant="ghost" size="icon" className="hover:bg-primary/20">
+              <Link href="https://www.instagram.com/ricardoquadross" target="_blank" rel="noopener noreferrer">
+                <Icons.instagram className="h-6 w-6 text-primary"/>
+                <span className="sr-only">Instagram</span>
               </Link>
             </Button>
           </div>
@@ -73,7 +79,7 @@ export function Contact() {
                          {text}
                        </Link>
                     ) : (
-                      <Link href={href} className="text-base md:text-lg hover:underline break-words" target={href.startsWith('http') ? '_blank' : undefined} rel={href.startsWith('http') ? "noopener noreferrer" : undefined}>
+                      <Link href={href} className="text-base md M:text-lg hover:underline break-words" target={href.startsWith('http') ? '_blank' : undefined} rel={href.startsWith('http') ? "noopener noreferrer" : undefined}>
                           {text}
                       </Link>
                     )}

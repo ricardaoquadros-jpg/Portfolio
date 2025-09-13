@@ -15,6 +15,7 @@ import {
   ChevronRight,
   Projector,
   Download,
+  Instagram,
   type LucideIcon,
 } from 'lucide-react';
 
@@ -35,6 +36,7 @@ export const Icons = {
   location: MapPin,
   linkedin: Linkedin,
   github: Github,
+  instagram: Instagram,
   right: ChevronRight,
   download: Download,
 };
