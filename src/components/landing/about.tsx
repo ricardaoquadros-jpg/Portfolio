@@ -15,13 +15,14 @@ export function About() {
       <div className="grid md:grid-cols-5 gap-12 items-center">
         <div className="md:col-span-2 flex justify-center">
             {avatar && (
-              <div className="relative group w-full max-w-[350px] mx-auto">
+              <div className="relative group w-full max-w-[350px] mx-auto rounded-lg overflow-hidden border-2 border-primary shadow-lg">
                 <div className="aspect-square relative">
+                  <div className="absolute inset-0 bg-background/50 group-hover:bg-background/80 transition-colors duration-300 z-10"></div>
                   <Image
                     src={avatar.imageUrl}
                     alt={avatar.description}
                     fill
-                    className="rounded-lg object-cover object-top border-2 border-primary shadow-lg transition-transform duration-300 group-hover:scale-105"
+                    className="object-cover object-top transition-all duration-300 group-hover:scale-105 group-hover:object-contain"
                     data-ai-hint={avatar.imageHint}
                   />
                 </div>
