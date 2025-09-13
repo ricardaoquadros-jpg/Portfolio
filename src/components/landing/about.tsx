@@ -21,7 +21,7 @@ export function About() {
                     src={avatar.imageUrl}
                     alt={avatar.description}
                     fill
-                    className="object-cover object-top transition-transform duration-500 ease-in-out group-hover:scale-105 group-hover:-translate-y-1/4"
+                    className="object-cover object-top transition-transform duration-500 ease-in-out group-hover:scale-105"
                     data-ai-hint={avatar.imageHint}
                   />
                 </div>
