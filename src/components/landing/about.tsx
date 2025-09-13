@@ -12,22 +12,23 @@ export function About() {
   const aboutContent = translations[language].about;
   return (
     <Section id="about" className="bg-card">
-      <div className="grid md:grid-cols-3 gap-8 md:gap-12 items-center">
-        <div className="md:col-span-1 flex justify-center">
+      <div className="grid md:grid-cols-5 gap-12 items-center">
+        <div className="md:col-span-2 flex justify-center">
             {avatar && (
-              <div className="relative group">
-                <Image
-                  src={avatar.imageUrl}
-                  alt={avatar.description}
-                  width={250}
-                  height={250}
-                  className="rounded-lg object-cover border-2 border-primary shadow-lg transition-transform duration-300 group-hover:scale-105"
-                  data-ai-hint={avatar.imageHint}
-                />
+              <div className="relative group w-full max-w-[350px] mx-auto">
+                <div className="aspect-square relative">
+                  <Image
+                    src={avatar.imageUrl}
+                    alt={avatar.description}
+                    fill
+                    className="rounded-lg object-cover border-2 border-primary shadow-lg transition-transform duration-300 group-hover:scale-105"
+                    data-ai-hint={avatar.imageHint}
+                  />
+                </div>
               </div>
             )}
         </div>
-        <div className="md:col-span-2 space-y-4">
+        <div className="md:col-span-3 space-y-4">
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl text-primary">
             {aboutContent.title}
           </h2>
