@@ -48,7 +48,9 @@ export function Projects() {
             </div>
             <div className="md:w-2/3 flex flex-col">
               <CardHeader>
-                  <CardTitle className="font-headline text-xl text-left">{project.title}</CardTitle>
+                <Link href="/projects">
+                  <CardTitle className="font-headline text-xl text-left hover:underline">{project.title}</CardTitle>
+                </Link>
               </CardHeader>
               <CardContent className="flex-grow">
                 <CardDescription className="mb-4 text-left">{project.description}</CardDescription>
