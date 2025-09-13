@@ -7,6 +7,7 @@ import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useLanguage } from "@/context/language-context";
+import { cn } from "@/lib/utils";
 
 const Logo = () => (
   <svg
@@ -51,7 +52,9 @@ export function Header() {
         <Link
           key={href}
           href={href}
-          className="text-foreground/80 hover:text-foreground transition-colors"
+          className={cn("text-foreground/80 hover:text-foreground transition-colors", {
+            "whitespace-nowrap": language === "pt-BR"
+          })}
           onClick={() => setIsOpen(false)}
         >
           {label}
