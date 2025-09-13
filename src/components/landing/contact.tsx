@@ -35,7 +35,7 @@ export function Contact() {
           </p>
           <div className="flex gap-4 pt-4">
             <Button asChild variant="ghost" size="icon" className="hover:bg-primary/20">
-              <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <Link href="https://www.linkedin.com/in/ricardoquadrosss/" target="_blank" rel="noopener noreferrer">
                 <Icons.linkedin className="h-6 w-6 text-primary"/>
                 <span className="sr-only">LinkedIn</span>
               </Link>
