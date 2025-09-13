@@ -23,18 +23,6 @@
       "description": "Screenshot of e-commerce project",
       "imageUrl": "https://picsum.photos/seed/project3/600/400",
       "imageHint": "online store"
-    },
-    {
-      "id": "about-image-1",
-      "description": "A person working on a laptop",
-      "imageUrl": "https://picsum.photos/seed/about1/600/600",
-      "imageHint": "laptop work"
-    },
-    {
-      "id": "about-image-2",
-      "description": "A modern desk setup",
-      "imageUrl": "https://picsum.photos/seed/about2/600/600",
-      "imageHint": "desk setup"
     }
   ]
 }
