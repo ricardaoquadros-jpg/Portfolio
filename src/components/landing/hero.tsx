@@ -10,7 +10,7 @@ export function Hero() {
   const heroContent = translations[language].hero;
 
   return (
-    <section id="hero" className="relative w-full h-screen min-h-[500px] flex items-center justify-center text-center overflow-hidden">
+    <section id="hero" className="relative w-full h-screen flex items-center justify-center text-center overflow-hidden">
       <div className="absolute inset-0 bg-background z-10 opacity-70"></div>
       <div className="absolute inset-0 bg-grid-pattern bg-grid-pattern opacity-10"></div>
       <div className="container relative z-20 px-4 md:px-6">
