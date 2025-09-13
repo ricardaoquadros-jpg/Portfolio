@@ -2,6 +2,7 @@ import type {Metadata} from 'next';
 import './globals.css';
 import {Toaster} from '@/components/ui/toaster';
 import { LanguageProvider } from '@/context/language-context';
+import { ThemeProvider } from '@/context/theme-provider';
 
 export const metadata: Metadata = {
   title: 'RQ Portfolio | Ricardo Quadros',
@@ -14,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className="dark">
+    <html lang="pt-BR" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -24,9 +25,16 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body bg-background text-foreground antialiased">
-        <LanguageProvider>
-          {children}
-        </LanguageProvider>
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+        >
+          <LanguageProvider>
+            {children}
+          </LanguageProvider>
+        </ThemeProvider>
         <Toaster />
       </body>
     </html>

@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useLanguage } from "@/context/language-context";
 import { cn } from "@/lib/utils";
+import { ThemeToggleButton } from "../shared/theme-toggle-button";
 
 const Logo = () => (
   <svg
@@ -76,6 +77,7 @@ export function Header() {
             <NavContent />
         </div>
         <div className="flex items-center justify-end w-1/3">
+            <ThemeToggleButton />
             <Button onClick={toggleLanguage} variant="ghost" size="sm" className="mr-2">
                 {language === 'pt-BR' ? 'EN' : 'PT'}
             </Button>
