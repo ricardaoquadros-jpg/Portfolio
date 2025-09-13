@@ -59,6 +59,7 @@ export interface Translation {
         title: string;
         subtitle: string;
         repositoryButton: string;
+        viewProjectButton: string;
         items: Project[];
     };
     certifications: {
@@ -184,6 +185,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
             title: "Projetos",
             subtitle: "Uma seleção de projetos que demonstram minhas habilidades em desenvolvimento.",
             repositoryButton: "Ver Repositório",
+            viewProjectButton: "Ver Projetos",
             items: [
                 {
                     title: "Portfólio Pessoal",
@@ -338,6 +340,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
             title: "Projects",
             subtitle: "A selection of projects demonstrating my development skills.",
             repositoryButton: "View Repository",
+            viewProjectButton: "View Projects",
             items: [
                 {
                     title: "Personal Portfolio",

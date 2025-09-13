@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Github } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/context/language-context";
@@ -28,16 +28,20 @@ export function Projects() {
       <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-8 max-w-3xl mx-auto">
         {projectsContent.items.map((project) => (
           <Card key={project.title} className="overflow-hidden shadow-lg hover:shadow-primary/20 transition-all duration-300 flex flex-col md:flex-row">
-            <div className="md:w-1/3 relative h-64 md:h-auto">
+            <div className="md:w-1/3 relative h-64 md:h-auto group">
               {project.image && (
                 <Link href="/projects" className="block w-full h-full">
                   <Image
                     src={project.image.imageUrl}
                     alt={project.image.description}
                     fill
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                     data-ai-hint={project.image.imageHint}
                   />
+                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-white p-4">
+                    <ExternalLink className="h-8 w-8 mb-2" />
+                    <span className="font-bold text-lg text-center">{translations[language].projects.viewProjectButton}</span>
+                  </div>
                 </Link>
               )}
             </div>
