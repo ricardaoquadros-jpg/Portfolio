@@ -7,23 +7,19 @@ import { Icons } from "@/components/icons";
 import Link from 'next/link';
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
-
-const contactInfo = [
-  { type: "email", Icon: Icons.contact, text: "ricpiquadros@gmail.com", href: "mailto:ricpiquadros@gmail.com" },
-  { type: "phone", Icon: Icons.phone, text: "(51) 99524-1338", href: "tel:+5551995241338" },
-  { type: "location", Icon: Icons.location, text: "Guaíba – RS, Brasil", href: "https://pt.wikipedia.org/wiki/Gua%C3%ADba" },
-  { type: "cv", Icon: Icons.download, text: "Baixar Currículo", href: "https://docs.google.com/document/d/1bz_syLDndCEs0JT92XSdn1VsyBVwUvjg/export?format=docx" },
-];
+import { useLanguage } from "@/context/language-context";
 
 export function Contact() {
+  const { language, translations } = useLanguage();
+  const contactContent = translations[language].contact;
   const { toast } = useToast();
 
   const handleCopy = (e: React.MouseEvent<HTMLAnchorElement>, textToCopy: string, type: 'email' | 'phone') => {
     e.preventDefault();
     navigator.clipboard.writeText(textToCopy);
     toast({
-      title: "Copiado!",
-      description: `O ${type === 'email' ? 'endereço de e-mail' : 'número de telefone'} foi copiado para a área de transferência.`,
+      title: contactContent.toast.title,
+      description: type === 'email' ? contactContent.toast.email : contactContent.toast.phone,
     });
   };
 
@@ -32,10 +28,10 @@ export function Contact() {
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div className="space-y-4">
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl text-primary">
-            Vamos Conversar?
+            {contactContent.title}
           </h2>
           <p className="text-lg text-foreground/80 max-w-md">
-            Estou sempre aberto a novas oportunidades e colaborações. Sinta-se à vontade para entrar em contato.
+            {contactContent.subtitle}
           </p>
           <div className="flex gap-4 pt-4">
             <Button asChild variant="ghost" size="icon" className="hover:bg-primary/20">
@@ -56,7 +52,9 @@ export function Contact() {
           <Card className="bg-primary/5 border-primary shadow-lg">
             <CardContent className="p-6 md:p-8">
               <ul className="space-y-6">
-                {contactInfo.map(({ type, Icon, text, href }) => (
+                {contactContent.info.map(({ type, Icon: IconName, text, href }) => {
+                  const Icon = Icons[IconName as keyof typeof Icons];
+                  return (
                   <li key={text} className="flex items-center gap-4">
                     <div className={cn(
                         "text-primary-foreground p-3 rounded-full flex-shrink-0",
@@ -80,7 +78,7 @@ export function Contact() {
                       </Link>
                     )}
                   </li>
-                ))}
+                )})}
               </ul>
             </CardContent>
           </Card>

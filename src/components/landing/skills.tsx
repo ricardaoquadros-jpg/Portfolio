@@ -1,15 +1,10 @@
+"use client";
 
 import { Section } from "@/components/shared/section";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-
-const allSkills = {
-  "Linguagens de Programação": ["Python", "Java", "C", "HTML", "CSS", "PHP", "Assembly"],
-  "Banco de Dados": ["MySQL"],
-  "Ferramentas e Tecnologias": ["Power BI", "Android Studio", "Pacote Office", "Firebase", "AI"],
-  "Hardware": ["Montagem e manutenção de computadores"],
-};
+import { useLanguage } from "@/context/language-context";
 
 function SkillCategory({ title, skills }: { title: string; skills: string[] }) {
   if (skills.length === 0) return null;
@@ -88,18 +83,21 @@ function SkillCategory({ title, skills }: { title: string; skills: string[] }) {
 }
 
 export function Skills() {
+  const { language, translations } = useLanguage();
+  const skillsContent = translations[language].skills;
+
   return (
     <Section id="skills">
       <div className="flex flex-col items-center text-center space-y-4 mb-12">
         <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl text-primary">
-          Competências Técnicas
+          {skillsContent.title}
         </h2>
         <p className="max-w-[700px] text-foreground/80 md:text-xl">
-          Habilidades e tecnologias que domino, priorizadas por relevância e sofisticação.
+          {skillsContent.subtitle}
         </p>
       </div>
       <div className="flex flex-wrap justify-center gap-6">
-        {Object.entries(allSkills).map(([title, skills]) => (
+        {Object.entries(skillsContent.categories).map(([title, skills]) => (
           <SkillCategory key={title} title={title} skills={skills} />
         ))}
       </div>

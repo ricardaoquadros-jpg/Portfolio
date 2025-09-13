@@ -1,3 +1,5 @@
+"use client";
+
 import { Section } from "@/components/shared/section";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -6,31 +8,25 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Github } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-
-const projectsData = [
-  {
-    title: "Portfólio Pessoal",
-    description: "Este é o próprio site que você está visitando, desenvolvido para mostrar minhas habilidades e projetos. Foi construído com tecnologias modernas, incluindo IA para priorização de competências.",
-    image: PlaceHolderImages.find(img => img.id === 'project-portfolio-v1'),
-    tags: ["Next.js", "React", "TailwindCSS", "ShadCN", "Genkit (AI)"],
-    githubUrl: "https://github.com",
-  }
-];
+import { useLanguage } from "@/context/language-context";
 
 export function Projects() {
+  const { language, translations } = useLanguage();
+  const projectsContent = translations[language].projects;
+
   return (
     <Section id="projects" className="bg-card">
       <div className="flex flex-col items-center text-center space-y-4 mb-12">
         <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl text-primary">
-          Projetos
+          {projectsContent.title}
         </h2>
         <p className="max-w-[700px] text-foreground/80 md:text-xl">
-          Uma seleção de projetos que demonstram minhas habilidades em desenvolvimento.
+          {projectsContent.subtitle}
         </p>
       </div>
 
       <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-8 max-w-3xl mx-auto">
-        {projectsData.map((project) => (
+        {projectsContent.items.map((project) => (
           <Card key={project.title} className="overflow-hidden shadow-lg hover:shadow-primary/20 transition-all duration-300 flex flex-col md:flex-row">
             <div className="md:w-1/3 relative">
               {project.image && (
@@ -65,7 +61,7 @@ export function Projects() {
                     <Button asChild variant="outline">
                         <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                             <Github className="mr-2 h-4 w-4" />
-                            Ver Repositório
+                            {projectsContent.repositoryButton}
                         </Link>
                     </Button>
                 )}
