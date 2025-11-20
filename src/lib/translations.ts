@@ -165,7 +165,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
             company: "Prefeitura de Guaíba",
             role: "Técnico de TI",
             period: "Agosto/2025 – Presente",
-            responsibilities: "Minha experiência no cargo foi marcada pelo desenvolvimento de competências essenciais para minha carreira.",
+            responsibilities: "",
             experienceDetails: "Dia 20/08/2025, iniciei minha trajetória na Prefeitura de Guaíba no setor de Atendimento Remoto, oportunidade que conquistei após minha aprovação no vestibular para Engenharia da Computação. Nesse período, desenvolvi atividades essenciais de suporte técnico, como reset de senhas, utilização do AnyDesk para acesso remoto, instalação de impressoras e configuração de softwares para os usuários dos diferentes setores.\n\nCom o bom desempenho e evolução constante, fui promovido em 10/11/2025 para o setor de Infraestrutura, onde atuo atualmente. Nessa área, passei a lidar com demandas mais avançadas, envolvendo administração de redes, gerenciamento de equipamentos e configurações críticas. No meu dia a dia, utilizo plataformas como mRemoteNG, Omada Controller, Sophos Firewall, Asana, Zimbra e Zabbix, realizando também instalação de impressoras, implantação de certificados digitais e apoio geral à manutenção da infraestrutura de TI do município.",
             highlights: [
                 "Suporte em Hardware e Software", "Manutenção de Computadores", "Gerenciamento de Redes",
@@ -321,7 +321,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
             company: "Guaíba City Hall",
             role: "IT Technician",
             period: "August/2025 – Present",
-            responsibilities: "My experience in the role was marked by the development of essential skills for my career.",
+            responsibilities: "",
             experienceDetails: "On 08/20/2025, I began my journey at the Guaíba City Hall in the Remote Support sector, an opportunity I earned after passing the entrance exam for Computer Engineering. During this period, I developed essential technical support skills, such as resetting passwords, using AnyDesk for remote access, installing printers, and configuring software for users in different departments.\n\nWith good performance and continuous evolution, I was promoted on 11/10/2025 to the Infrastructure sector, where I currently work. In this area, I started handling more advanced demands, involving network administration, equipment management, and critical configurations. In my day-to-day, I use platforms like mRemoteNG, Omada Controller, Sophos Firewall, Asana, Zimbra, and Zabbix, also performing printer installations, digital certificate implementation, and general support for the maintenance of the municipality's IT infrastructure.",
             highlights: [
                 "Hardware and Software Support", "Computer Maintenance", "Network Management",

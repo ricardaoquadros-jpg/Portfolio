@@ -50,7 +50,6 @@ export function Experience() {
               </CardHeader>
               <CollapsibleContent>
                 <CardContent>
-                  <p className="mb-4 text-justify">{experienceContent.responsibilities}</p>
                   <div className="space-y-4">
                     <p className="indent-8 text-justify">{experienceContent.experienceDetails}</p>
                   </div>
