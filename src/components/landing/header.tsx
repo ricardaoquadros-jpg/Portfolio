@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { useLanguage } from "@/context/language-context";
 import { cn } from "@/lib/utils";
 import { ThemeToggleButton } from "../shared/theme-toggle-button";
@@ -88,6 +88,9 @@ export function Header() {
                 </Button>
                 </SheetTrigger>
                 <SheetContent side="right">
+                  <SheetHeader>
+                    <SheetTitle className="sr-only">Menu de Navegação</SheetTitle>
+                  </SheetHeader>
                 <div className="flex flex-col gap-8 pt-12">
                     <Link href="#" className="flex items-center gap-2 self-start" onClick={() => setIsOpen(false)}>
                     <Logo />
