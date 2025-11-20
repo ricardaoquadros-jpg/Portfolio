@@ -120,6 +120,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
             { href: "#skills", label: "Competências" },
             { href: "#projects", label: "Projetos" },
             { href: "#contact", label: "Contato" },
+            { href: "/playground", label: "Playground" },
         ],
         header: {
             openMenu: "Abrir menu",
@@ -279,6 +280,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
             { href: "#skills", label: "Skills" },
             { href: "#projects", label: "Projects" },
             { href: "#contact", label: "Contact" },
+            { href: "/playground", label: "Playground" },
         ],
         header: {
             openMenu: "Open menu",
