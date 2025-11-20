@@ -51,7 +51,9 @@ export function Experience() {
               <CollapsibleContent>
                 <CardContent>
                   <div className="space-y-4">
-                    <p className="indent-8 text-justify">{experienceContent.experienceDetails}</p>
+                    {experienceContent.experienceDetails.map((paragraph, index) => (
+                      <p key={index} className="indent-8 text-justify">{paragraph}</p>
+                    ))}
                   </div>
                   <div className="flex flex-wrap gap-2 mt-4">
                     {experienceContent.highlights.map((highlight) => (
