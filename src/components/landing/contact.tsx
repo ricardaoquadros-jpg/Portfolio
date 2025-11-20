@@ -41,7 +41,7 @@ export function Contact() {
               </Link>
             </Button>
             <Button asChild variant="ghost" size="icon" className="hover:bg-primary/20">
-              <Link href="https://github.com/ricardoquadross" target="_blank" rel="noopener noreferrer">
+              <Link href="https://github.com/ricardaoquadros-jpg" target="_blank" rel="noopener noreferrer">
                 <Icons.github className="h-6 w-6 text-primary"/>
                 <span className="sr-only">GitHub</span>
               </Link>

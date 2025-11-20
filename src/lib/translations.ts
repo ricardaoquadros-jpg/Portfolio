@@ -192,7 +192,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                     description: "Este é o próprio site que você está visitando, desenvolvido para mostrar minhas habilidades e projetos. Foi construído com tecnologias modernas, incluindo IA para priorização de competências.",
                     image: PlaceHolderImages.find(img => img.id === 'project-portfolio-v1'),
                     tags: ["Next.js", "React", "TailwindCSS", "ShadCN", "Genkit (AI)"],
-                    githubUrl: "https://github.com",
+                    githubUrl: "https://github.com/ricardaoquadros-jpg",
                 }
             ],
         },
@@ -247,7 +247,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                     description: "Este é o próprio site que você está visitando, desenvolvido para mostrar minhas habilidades e projetos. Foi construído com tecnologias modernas, incluindo IA para priorização de competências.",
                     image: PlaceHolderImages.find(img => img.id === 'project-portfolio-v1'),
                     tags: ["Next.js", "React", "TailwindCSS", "ShadCN", "Genkit (AI)"],
-                    githubUrl: "https://github.com",
+                    githubUrl: "https://github.com/ricardaoquadros-jpg",
                 },
                 {
                     title: "Gerenciador de Tarefas",
@@ -347,7 +347,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                     description: "This is the very site you are visiting, developed to showcase my skills and projects. It was built with modern technologies, including AI for skill prioritization.",
                     image: PlaceHolderImages.find(img => img.id === 'project-portfolio-v1'),
                     tags: ["Next.js", "React", "TailwindCSS", "ShadCN", "Genkit (AI)"],
-                    githubUrl: "https://github.com",
+                    githubUrl: "https://github.com/ricardaoquadros-jpg",
                 }
             ],
         },
@@ -402,7 +402,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                     description: "This is the very site you are visiting, developed to showcase my skills and projects. It was built with modern technologies, including AI for skill prioritization.",
                     image: PlaceHolderImages.find(img => img.id === 'project-portfolio-v1'),
                     tags: ["Next.js", "React", "TailwindCSS", "ShadCN", "Genkit (AI)"],
-                    githubUrl: "https://github.com",
+                    githubUrl: "https://github.com/ricardaoquadros-jpg",
                 },
                 {
                     title: "Task Manager",
