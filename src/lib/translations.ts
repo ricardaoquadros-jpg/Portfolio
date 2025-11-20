@@ -46,6 +46,7 @@ export interface Translation {
         role: string;
         period: string;
         responsibilities: string;
+        experienceDetails: string;
         highlights: string[];
     };
     skills: {
@@ -164,7 +165,8 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
             company: "Prefeitura de Guaíba",
             role: "Técnico de TI",
             period: "Agosto/2025 – Presente",
-            responsibilities: "Principais responsabilidades e destaques:",
+            responsibilities: "Minha experiência no cargo foi marcada pelo desenvolvimento de competências essenciais, como a resolução de problemas de hardware e software, suporte a usuários e gerenciamento de redes. Abaixo estão os principais destaques das minhas responsabilidades:",
+            experienceDetails: "",
             highlights: [
                 "Suporte em Hardware e Software", "Manutenção de Computadores", "Gerenciamento de Redes",
                 "Atendimento a Usuários", "Configuração de Computadores e Impressoras", "Cabeamento",
@@ -319,7 +321,8 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
             company: "Guaíba City Hall",
             role: "IT Technician",
             period: "August/2025 – Present",
-            responsibilities: "Main responsibilities and highlights:",
+            responsibilities: "My experience in the role was marked by the development of essential skills, such as hardware and software troubleshooting, user support, and network management. Below are the main highlights of my responsibilities:",
+            experienceDetails: "",
             highlights: [
                 "Hardware and Software Support", "Computer Maintenance", "Network Management",
                 "User Support", "Computer and Printer Setup", "Cabling",
