@@ -228,9 +228,9 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
             title: "Vamos Conversar?",
             subtitle: "Estou sempre aberto a novas oportunidades e colaborações. Sinta-se à vontade para entrar em contato.",
             info: [
-                { type: "email", Icon: "contact", text: "ricpiquadros@gmail.com", href: "mailto:ricpiquadros@gmail.com" },
+                { type: "email", Icon: "contact", text: "ricardaoquadros@gmail.com", href: "mailto:ricardaoquadros@gmail.com" },
                 { type: "phone", Icon: "phone", text: "(51) 99524-1338", href: "tel:+5551995241338" },
-                { type: "location", Icon: "location", text: "Guaíba – RS, Brasil", href: "https://pt.wikipedia.org/wiki/Gua%C3%ADba" },
+                { type: "location", Icon: "location", text: "Guaíba – Rio Grande do Sul, Brasil", href: "https://pt.wikipedia.org/wiki/Gua%C3%ADba" },
                 { type: "cv", Icon: "download", text: "Baixar Currículo", href: "https://docs.google.com/document/d/1bz_syLDndCEs0JT92XSdn1VsyBVwUvjg/export?format=docx" },
             ],
             toast: {
@@ -387,9 +387,9 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
             title: "Let's Talk?",
             subtitle: "I am always open to new opportunities and collaborations. Feel free to get in touch.",
             info: [
-                { type: "email", Icon: "contact", text: "ricpiquadros@gmail.com", href: "mailto:ricpiquadros@gmail.com" },
+                { type: "email", Icon: "contact", text: "ricardaoquadros@gmail.com", href: "mailto:ricardaoquadros@gmail.com" },
                 { type: "phone", Icon: "phone", text: "+55 51 99524-1338", href: "tel:+5551995241338" },
-                { type: "location", Icon: "location", text: "Guaíba – RS, Brazil", href: "https://en.wikipedia.org/wiki/Gua%C3%ADba" },
+                { type: "location", Icon: "location", text: "Guaíba – Rio Grande do Sul, Brazil", href: "https://en.wikipedia.org/wiki/Gua%C3%ADba" },
                 { type: "cv", Icon: "download", text: "Download CV", href: "https://docs.google.com/document/d/1bz_syLDndCEs0JT92XSdn1VsyBVwUvjg/export?format=docx" },
             ],
             toast: {

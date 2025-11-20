@@ -79,7 +79,7 @@ export function Contact() {
                          {text}
                        </Link>
                     ) : (
-                      <Link href={href} className="text-base md M:text-lg hover:underline break-words" target={href.startsWith('http') ? '_blank' : undefined} rel={href.startsWith('http') ? "noopener noreferrer" : undefined}>
+                      <Link href={href} className="text-base md:text-lg hover:underline break-words" target={href.startsWith('http') ? '_blank' : undefined} rel={href.startsWith('http') ? "noopener noreferrer" : undefined}>
                           {text}
                       </Link>
                     )}
