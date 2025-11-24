@@ -7,7 +7,6 @@ import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { useLanguage } from "@/context/language-context";
-import { cn } from "@/lib/utils";
 import { ThemeToggleButton } from "../shared/theme-toggle-button";
 
 const Logo = () => (
