@@ -3,12 +3,12 @@ import React from "react";
 import { Section } from "@/components/shared/section";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Github, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/context/language-context";
+import { SpotlightCard } from "@/components/ui/spotlight-card";
 
 export function Projects() {
   const { language, translations } = useLanguage();
@@ -27,10 +27,10 @@ export function Projects() {
 
       <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-8 max-w-3xl mx-auto">
         {projectsContent.items.map((project) => (
-          <Card key={project.title} className="overflow-hidden shadow-lg hover:shadow-primary/20 transition-all duration-300 flex flex-col md:flex-row">
+          <SpotlightCard key={project.title} className="overflow-hidden shadow-lg hover:shadow-primary/20 transition-all duration-300 flex flex-col md:flex-row">
             <div className="md:w-1/3 relative h-64 md:h-auto group">
               {project.image && (
-                <Link href="/projects" className="block w-full h-full">
+                <Link href={project.githubUrl || "/projects"} target={project.githubUrl ? "_blank" : undefined} rel={project.githubUrl ? "noopener noreferrer" : undefined} className="block w-full h-full">
                   <Image
                     src={project.image.imageUrl}
                     alt={project.image.description}
@@ -40,7 +40,7 @@ export function Projects() {
                   />
                   <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-white p-4">
                     <ExternalLink className="h-8 w-8 mb-2" />
-                    <span className="font-bold text-lg text-center">{translations[language].projects.viewProjectButton}</span>
+                    <span className="font-bold text-lg text-center">{project.githubUrl ? projectsContent.repositoryButton : translations[language].projects.viewProjectButton}</span>
                   </div>
                 </Link>
               )}
@@ -60,17 +60,17 @@ export function Projects() {
                 </div>
               </CardContent>
               <CardFooter>
-                 {project.githubUrl && (
-                    <Button asChild variant="outline">
-                        <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                            <Github className="mr-2 h-4 w-4" />
-                            {projectsContent.repositoryButton}
-                        </Link>
-                    </Button>
+                {project.githubUrl && (
+                  <Button asChild variant="outline">
+                    <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                      <Github className="mr-2 h-4 w-4" />
+                      {projectsContent.repositoryButton}
+                    </Link>
+                  </Button>
                 )}
               </CardFooter>
             </div>
-          </Card>
+          </SpotlightCard>
         ))}
       </div>
     </Section>

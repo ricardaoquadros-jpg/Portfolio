@@ -1,8 +1,10 @@
-import type {Metadata} from 'next';
+import type { Metadata } from 'next';
 import './globals.css';
-import {Toaster} from '@/components/ui/toaster';
+import { Toaster } from '@/components/ui/toaster';
 import { LanguageProvider } from '@/context/language-context';
 import { ThemeProvider } from '@/context/theme-provider';
+import { Background3D } from '@/components/ui/background-3d';
+import React from 'react';
 
 export const metadata: Metadata = {
   title: 'RQ Portfolio | Ricardo Quadros',
@@ -26,12 +28,13 @@ export default function RootLayout({
       </head>
       <body>
         <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
         >
           <LanguageProvider>
+            <Background3D />
             {children}
           </LanguageProvider>
         </ThemeProvider>
