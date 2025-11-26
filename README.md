@@ -1,3 +1,12 @@
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![Antigravity](https://img.shields.io/badge/Antigravity_IDE-000000?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase_Studio-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
+![Gemini 3 Pro](https://img.shields.io/badge/Gemini_3_Pro-AUTO?style=for-the-badge&logo=google&logoColor=white)
+![ChatGPT 5.1](https://img.shields.io/badge/ChatGPT_5.1-00A67D?style=for-the-badge&logo=openai&logoColor=white)
+
 # 🌐 Portfólio Pessoal – Ricardo Quadros
 
 Este repositório contém o código-fonte do meu portfólio pessoal, desenvolvido utilizando ferramentas modernas e workflows baseados em prompts. O principal objetivo deste projeto é apresentar minha trajetória, habilidades e projetos na área de **Engenharia de Computação** e **Tecnologia da Informação**.
