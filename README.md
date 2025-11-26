@@ -41,21 +41,15 @@ O desenvolvimento foi realizado através da **IDE Antigravity**, com fluxos de c
 ---
 
 ## 📦 Estrutura do Projeto
-
+```bash
 /
-
 ├─ public/
-
 │ ├─ index.html
-
 │ ├─ assets/
-
 │ └─ styles/
-
 ├─ firebase.json
-
 └─ README.md
-
+```
 
 ---
 
