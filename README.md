@@ -35,11 +35,17 @@ O desenvolvimento foi realizado através da **IDE Antigravity**, com fluxos de c
 ## 📦 Estrutura do Projeto
 
 /
+
 ├─ public/
+
 │ ├─ index.html
+
 │ ├─ assets/
+
 │ └─ styles/
+
 ├─ firebase.json
+
 └─ README.md
 
 
@@ -72,4 +78,4 @@ Guaíba, RS – Brasil
 
 - GitHub: https://github.com/ricardaoquadros-jpg  
 - Email: ricardaoquadros@gmail.com
-- Linkedin: ricardopquadros
+- Linkedin: https://www.linkedin.com/in/ricardopquadros/
