@@ -34,15 +34,15 @@ export function Projects() {
       </div>
 
       {/* Grid de projetos - cards verticais lado a lado */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+      <div className="flex flex-wrap justify-center gap-6 max-w-5xl mx-auto">
         {projectsContent.items.map((project, index) => (
           <SpotlightCard
             key={project.title}
             onClick={() => handleProjectClick(index)}
-            className="overflow-hidden shadow-lg hover:shadow-primary/40 transition-all duration-300 flex flex-col group rounded-xl cursor-pointer hover:scale-105"
+            className="overflow-hidden shadow-lg hover:shadow-primary/40 transition-all duration-300 flex flex-col group rounded-2xl cursor-pointer hover:scale-105 w-48 md:w-56"
           >
             {/* Imagem do projeto */}
-            <div className="relative w-full aspect-[3/4] overflow-hidden">
+            <div className="relative w-full h-72 md:h-80 overflow-hidden">
               {project.image && (
                 <Image
                   src={project.image.imageUrl}
