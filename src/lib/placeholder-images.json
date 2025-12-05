@@ -23,6 +23,12 @@
       "description": "Screenshot of e-commerce project",
       "imageUrl": "https://picsum.photos/seed/project3/600/400",
       "imageHint": "online store"
+    },
+    {
+      "id": "project-frontend-backend",
+      "description": "Screenshot of Frontend vs Backend educational site",
+      "imageUrl": "https://i.ibb.co/LXWtDrkP/image.png",
+      "imageHint": "educational website"
     }
   ]
 }

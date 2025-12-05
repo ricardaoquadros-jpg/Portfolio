@@ -198,6 +198,13 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                     image: PlaceHolderImages.find(img => img.id === 'project-portfolio-v1'),
                     tags: ["Next.js", "React", "TailwindCSS", "ShadCN", "Genkit (AI)"],
                     githubUrl: "https://github.com/ricardaoquadros-jpg/Portfolio",
+                },
+                {
+                    title: "Frontend vs. Backend",
+                    description: "Site didático desenvolvido como TCC na E.E.E.M. Dr. Solon Tavares, explicando de forma clara a diferença entre Frontend e Backend no desenvolvimento web.",
+                    image: PlaceHolderImages.find(img => img.id === 'project-frontend-backend'),
+                    tags: ["HTML5", "CSS3", "JavaScript", "Firebase Studio", "Gemini API"],
+                    githubUrl: "https://github.com/ricardaoquadros-jpg/Tcc",
                 }
             ],
         },
@@ -357,6 +364,13 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                     image: PlaceHolderImages.find(img => img.id === 'project-portfolio-v1'),
                     tags: ["Next.js", "React", "TailwindCSS", "ShadCN", "Genkit (AI)"],
                     githubUrl: "https://github.com/ricardaoquadros-jpg/Portfolio",
+                },
+                {
+                    title: "Frontend vs. Backend",
+                    description: "Educational website developed as a final project at E.E.E.M. Dr. Solon Tavares, clearly explaining the difference between Frontend and Backend in web development.",
+                    image: PlaceHolderImages.find(img => img.id === 'project-frontend-backend'),
+                    tags: ["HTML5", "CSS3", "JavaScript", "Firebase Studio", "Gemini API"],
+                    githubUrl: "https://github.com/ricardaoquadros-jpg/Tcc",
                 }
             ],
         },
