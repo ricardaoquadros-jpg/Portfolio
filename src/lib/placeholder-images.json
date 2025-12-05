@@ -29,6 +29,12 @@
       "description": "Screenshot of Frontend vs Backend educational site",
       "imageUrl": "https://i.imgur.com/HrsWhZ7.png",
       "imageHint": "educational website"
+    },
+    {
+      "id": "project-protocolo-entrega",
+      "description": "Screenshot of Protocolo de Entrega system",
+      "imageUrl": "https://i.imgur.com/ltWHZ2V.png",
+      "imageHint": "delivery protocol system"
     }
   ]
 }

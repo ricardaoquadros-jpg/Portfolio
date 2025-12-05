@@ -205,6 +205,13 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                     image: PlaceHolderImages.find(img => img.id === 'project-frontend-backend'),
                     tags: ["HTML5", "CSS3", "JavaScript", "Firebase Studio", "Gemini API"],
                     githubUrl: "https://github.com/ricardaoquadros-jpg/Tcc",
+                },
+                {
+                    title: "Protocolo de Entrega",
+                    description: "Sistema web desenvolvido para a Prefeitura de Guaíba que gera protocolos de entrega com assinatura digital, envio automático por e-mail e painel administrativo.",
+                    image: PlaceHolderImages.find(img => img.id === 'project-protocolo-entrega'),
+                    tags: ["PHP", "MySQL", "JavaScript", "HTML5", "CSS3", "PHPMailer"],
+                    githubUrl: "https://github.com/ricardaoquadros-jpg/ProtocolodeEntrega",
                 }
             ],
         },
@@ -371,6 +378,13 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                     image: PlaceHolderImages.find(img => img.id === 'project-frontend-backend'),
                     tags: ["HTML5", "CSS3", "JavaScript", "Firebase Studio", "Gemini API"],
                     githubUrl: "https://github.com/ricardaoquadros-jpg/Tcc",
+                },
+                {
+                    title: "Delivery Protocol",
+                    description: "Web system developed for Guaíba City Hall that generates delivery protocols with digital signature, automatic email sending and administrative panel.",
+                    image: PlaceHolderImages.find(img => img.id === 'project-protocolo-entrega'),
+                    tags: ["PHP", "MySQL", "JavaScript", "HTML5", "CSS3", "PHPMailer"],
+                    githubUrl: "https://github.com/ricardaoquadros-jpg/ProtocolodeEntrega",
                 }
             ],
         },
