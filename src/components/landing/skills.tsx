@@ -22,9 +22,9 @@ const skillIcons: Record<string, string> = {
   // Ferramentas e Tecnologias
   "Power BI": "https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg",
   "Android Studio": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg",
-  "Pacote Office": "https://img.icons8.com/color/96/microsoft-office-2019.png",
-  "Office Suite": "https://img.icons8.com/color/96/microsoft-office-2019.png",
-  "Firebase": "https://firebase.google.com/static/images/brand-guidelines/logo-vertical.png?hl=pt-br",
+  "Pacote Office": "https://images.icon-icons.com/1156/PNG/512/1486565573-microsoft-office_81557.png",
+  "Office Suite": "https://images.icon-icons.com/1156/PNG/512/1486565573-microsoft-office_81557.png",
+  "Firebase": "https://www.gstatic.com/devrel-devsite/prod/v0e0f589edd85502a40d78d7d0825db8ea5ef3b99ab4070381ee86977c9168730/firebase/images/touchicon-180.png",
   "AI": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg",
   "Git": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
   "GitHub": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
@@ -34,8 +34,12 @@ const skillIcons: Record<string, string> = {
   "Computer assembly and maintenance": "https://cdn-icons-png.flaticon.com/512/900/900618.png",
 };
 
+// Skills que precisam de ícone maior
+const largerIconSkills = ["Firebase"];
+
 function SkillCard({ skill }: { skill: string }) {
   const iconUrl = skillIcons[skill];
+  const isLargerIcon = largerIconSkills.includes(skill);
 
   return (
     <div className="group flex flex-col items-center justify-center p-6 bg-card border border-border rounded-2xl shadow-sm hover:shadow-lg hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 min-w-[120px]">
@@ -43,7 +47,7 @@ function SkillCard({ skill }: { skill: string }) {
         <img
           src={iconUrl}
           alt={skill}
-          className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform duration-300"
+          className={`mb-3 group-hover:scale-110 transition-transform duration-300 object-contain ${isLargerIcon ? 'w-20 h-20' : 'w-12 h-12'}`}
         />
       ) : (
         <div className="w-12 h-12 mb-3 bg-primary/10 rounded-lg flex items-center justify-center text-primary font-bold text-lg">
