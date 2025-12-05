@@ -1,84 +1,57 @@
 "use client";
 
 import { Section } from "@/components/shared/section";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
 import { useLanguage } from "@/context/language-context";
 
-function SkillCategory({ title, skills }: { title: string; skills: string[] }) {
-  if (skills.length === 0) return null;
+// Mapeamento de skills para seus ícones (usando imagens da web ou emoji como fallback)
+const skillIcons: Record<string, string> = {
+  // Linguagens de Programação
+  "Python": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  "Java": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+  "C": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
+  "HTML": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+  "CSS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+  "PHP": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+  "Assembly": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/labview/labview-original.svg",
+  "JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  "TypeScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
 
-  // AI prioritization is temporarily disabled to avoid rate limiting issues.
-  const prioritizedSkills = ["Python", "Java", "HTML", "CSS", "PHP", "Assembly", "C"];
-  
-  const getSkillEmphasis = (skill: string) => {
-    const index = prioritizedSkills.indexOf(skill);
-    if (index === -1) return "default";
-    // Simplified emphasis without AI for now
-    if (index < 2) return "top"; // Python, Java
-    if (index < 6) return "middle"; // HTML, CSS, PHP, Assembly
-    return "bottom"; // C
-  };
+  // Banco de Dados
+  "MySQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
 
-  const getVariant = (skill: string): 'default' | 'secondary' | 'outline' => {
-    const emphasis = getSkillEmphasis(skill);
-    if (emphasis === 'top') return 'default'; // Python, Java
+  // Ferramentas e Tecnologias
+  "Power BI": "https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg",
+  "Android Studio": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg",
+  "Pacote Office": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Microsoft_Office_logo_%282019%E2%80%93present%29.svg",
+  "Office Suite": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Microsoft_Office_logo_%282019%E2%80%93present%29.svg",
+  "Firebase": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+  "AI": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg",
+  "Git": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+  "GitHub": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
 
-    if (["Firebase", "AI", "MySQL", "Montagem e manutenção de computadores", "Power BI", "C"].includes(skill)) {
-      return 'default';
-    }
+  // Hardware
+  "Montagem e manutenção de computadores": "https://cdn-icons-png.flaticon.com/512/900/900618.png",
+  "Computer assembly and maintenance": "https://cdn-icons-png.flaticon.com/512/900/900618.png",
+};
 
-    if (["HTML", "CSS", "PHP", "Android Studio", "Pacote Office", "Assembly"].includes(skill)) {
-      return 'secondary';
-    }
-    
-    return 'outline';
-  }
-
-  // Use a consistent sort order for display purposes
-  const displaySkills = [...skills].sort((a, b) => {
-    const aVariant = getVariant(a);
-    const bVariant = getVariant(b);
-    if (aVariant === bVariant) {
-        return a.localeCompare(b);
-    }
-    if (aVariant === 'default') return -1;
-    if (bVariant === 'default') return 1;
-    if (aVariant === 'secondary') return -1;
-    if (bVariant === 'secondary') return 1;
-    return 0;
-  });
-
+function SkillCard({ skill }: { skill: string }) {
+  const iconUrl = skillIcons[skill];
 
   return (
-    <Card className="flex-1 min-w-[280px] bg-background/50">
-      <CardHeader>
-        <CardTitle className="font-headline text-xl text-primary">{title}</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <div className="flex flex-wrap gap-2">
-          {displaySkills.map((skill) => {
-            const variant = getVariant(skill);
-            const isTop = variant === 'default';
-            
-            return (
-              <Badge
-                key={skill}
-                variant={variant}
-                className={cn("transition-all", {
-                  "text-base px-4 py-1 shadow-md scale-105": isTop,
-                  "text-sm": variant === 'secondary',
-                  "font-normal": variant === 'outline',
-                })}
-              >
-                {skill}
-              </Badge>
-            );
-          })}
+    <div className="group flex flex-col items-center justify-center p-6 bg-card border border-border rounded-2xl shadow-sm hover:shadow-lg hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 min-w-[120px]">
+      {iconUrl ? (
+        <img
+          src={iconUrl}
+          alt={skill}
+          className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform duration-300"
+        />
+      ) : (
+        <div className="w-12 h-12 mb-3 bg-primary/10 rounded-lg flex items-center justify-center text-primary font-bold text-lg">
+          {skill.charAt(0)}
         </div>
-      </CardContent>
-    </Card>
+      )}
+      <span className="text-sm font-medium text-foreground text-center">{skill}</span>
+    </div>
   );
 }
 
@@ -86,19 +59,21 @@ export function Skills() {
   const { language, translations } = useLanguage();
   const skillsContent = translations[language].skills;
 
+  // Flatten all skills from categories into a single array
+  const allSkills = Object.values(skillsContent.categories).flat();
+
   return (
     <Section id="skills">
-      <div className="flex flex-col items-center text-center space-y-4 mb-12">
+      <div className="flex flex-col items-start space-y-4 mb-10">
         <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl text-primary">
           {skillsContent.title}
         </h2>
-        <p className="max-w-[700px] text-foreground/80 md:text-xl">
-          {skillsContent.subtitle}
-        </p>
+        <div className="w-16 h-1 bg-primary rounded-full"></div>
       </div>
-      <div className="flex flex-wrap justify-center gap-6">
-        {Object.entries(skillsContent.categories).map(([title, skills]) => (
-          <SkillCategory key={title} title={title} skills={skills} />
+
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-4">
+        {allSkills.map((skill) => (
+          <SkillCard key={skill} skill={skill} />
         ))}
       </div>
     </Section>
