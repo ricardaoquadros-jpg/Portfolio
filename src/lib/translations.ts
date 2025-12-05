@@ -196,7 +196,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                     title: "Portfólio Pessoal",
                     description: "Site pessoal responsivo com tema dark/light, animações suaves e integração com IA do Google para priorização inteligente de competências. Inclui sistema de internacionalização (PT-BR/EN).",
                     image: PlaceHolderImages.find(img => img.id === 'project-portfolio-v1'),
-                    tags: ["Next.js 15", "React 18", "TypeScript", "TailwindCSS", "ShadCN/Radix UI", "Google Genkit AI", "Firebase", "Lucide Icons", "Zod", "React Hook Form"],
+                    tags: ["Next.js", "React", "TypeScript", "HTML5", "CSS3", "TailwindCSS", "Antigravity IDE", "Claude Opus 4.5", "Gemini 3 Pro", "Firebase", "ShadCN/Radix UI"],
                     githubUrl: "https://github.com/ricardaoquadros-jpg/Portfolio",
                 },
                 {
@@ -369,7 +369,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                     title: "Personal Portfolio",
                     description: "Responsive personal website with dark/light theme, smooth animations and Google AI integration for intelligent skill prioritization. Includes internationalization system (PT-BR/EN).",
                     image: PlaceHolderImages.find(img => img.id === 'project-portfolio-v1'),
-                    tags: ["Next.js 15", "React 18", "TypeScript", "TailwindCSS", "ShadCN/Radix UI", "Google Genkit AI", "Firebase", "Lucide Icons", "Zod", "React Hook Form"],
+                    tags: ["Next.js", "React", "TypeScript", "HTML5", "CSS3", "TailwindCSS", "Antigravity IDE", "Claude Opus 4.5", "Gemini 3 Pro", "Firebase", "ShadCN/Radix UI"],
                     githubUrl: "https://github.com/ricardaoquadros-jpg/Portfolio",
                 },
                 {

@@ -11,8 +11,8 @@ import { SpotlightCard } from "@/components/ui/spotlight-card";
 // Mapeamento de tecnologias para seus ícones
 const techIcons: Record<string, string> = {
   // Linguagens
-  "Next.js 15": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-  "React 18": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  "Next.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+  "React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   "TypeScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
   "JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
   "HTML5": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
@@ -32,6 +32,9 @@ const techIcons: Record<string, string> = {
   "Firebase Studio": "https://images.seeklogo.com/logo-png/61/1/firebase-icon-logo-png_seeklogo-615938.png",
   "Google Genkit AI": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
   "Gemini 2.5 Flash": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
+  "Gemini 3 Pro": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
+  "Claude Opus 4.5": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/anthropic.svg",
+  "Antigravity IDE": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
   "Vercel": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg",
   "Git": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
   "GitHub": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
@@ -48,8 +51,8 @@ const techIcons: Record<string, string> = {
 // Categorização das tecnologias
 const techCategories: Record<string, { category: "primary" | "platform" | "secondary" }> = {
   // Linguagens principais
-  "Next.js 15": { category: "primary" },
-  "React 18": { category: "primary" },
+  "Next.js": { category: "primary" },
+  "React": { category: "primary" },
   "TypeScript": { category: "primary" },
   "JavaScript": { category: "primary" },
   "HTML5": { category: "primary" },
@@ -63,6 +66,9 @@ const techCategories: Record<string, { category: "primary" | "platform" | "secon
   "Firebase Studio": { category: "platform" },
   "Google Genkit AI": { category: "platform" },
   "Gemini 2.5 Flash": { category: "platform" },
+  "Gemini 3 Pro": { category: "platform" },
+  "Claude Opus 4.5": { category: "platform" },
+  "Antigravity IDE": { category: "platform" },
   "Vercel": { category: "platform" },
   "Git": { category: "platform" },
   "GitHub": { category: "platform" },
