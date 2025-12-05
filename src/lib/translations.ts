@@ -210,7 +210,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                     title: "Protocolo de Entrega",
                     description: "Sistema completo para a Prefeitura de Guaíba com geração de protocolos, assinatura digital via Canvas, geração de PDF, envio automático por e-mail e painel administrativo com dashboard.",
                     image: PlaceHolderImages.find(img => img.id === 'project-protocolo-entrega'),
-                    tags: ["PHP", "MySQL", "JavaScript", "HTML5", "CSS3", "PHPMailer", "Canvas API", "PDF.js", "Vercel"],
+                    tags: ["PHP", "MySQL", "JavaScript", "HTML5", "CSS3", "PHPMailer", "Antigravity IDE", "Gemini 3 Pro", "Claude Opus 4.5", "Claude Sonnet 4.5", "Vercel"],
                     githubUrl: "https://github.com/ricardaoquadros-jpg/ProtocolodeEntrega",
                 }
             ],
@@ -383,7 +383,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                     title: "Delivery Protocol",
                     description: "Complete system for Guaíba City Hall with protocol generation, digital signature via Canvas, PDF generation, automatic email sending and administrative panel with dashboard.",
                     image: PlaceHolderImages.find(img => img.id === 'project-protocolo-entrega'),
-                    tags: ["PHP", "MySQL", "JavaScript", "HTML5", "CSS3", "PHPMailer", "Canvas API", "PDF.js", "Vercel"],
+                    tags: ["PHP", "MySQL", "JavaScript", "HTML5", "CSS3", "PHPMailer", "Antigravity IDE", "Gemini 3 Pro", "Claude Opus 4.5", "Claude Sonnet 4.5", "Vercel"],
                     githubUrl: "https://github.com/ricardaoquadros-jpg/ProtocolodeEntrega",
                 }
             ],
