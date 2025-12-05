@@ -203,7 +203,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                     title: "Frontend vs. Backend",
                     description: "Site educacional interativo desenvolvido como TCC, explicando as diferenças entre Frontend e Backend com exemplos práticos, diagramas e conteúdo gerado por IA.",
                     image: PlaceHolderImages.find(img => img.id === 'project-frontend-backend'),
-                    tags: ["HTML5", "CSS3", "JavaScript", "Firebase Studio", "Gemini 3 Pro API", "Git", "GitHub"],
+                    tags: ["HTML5", "CSS3", "JavaScript", "Firebase Studio", "Gemini 2.5 Flash", "Git", "GitHub"],
                     githubUrl: "https://github.com/ricardaoquadros-jpg/Tcc",
                 },
                 {
@@ -376,7 +376,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                     title: "Frontend vs. Backend",
                     description: "Interactive educational website developed as a final project, explaining the differences between Frontend and Backend with practical examples, diagrams and AI-generated content.",
                     image: PlaceHolderImages.find(img => img.id === 'project-frontend-backend'),
-                    tags: ["HTML5", "CSS3", "JavaScript", "Firebase Studio", "Gemini 3 Pro API", "Git", "GitHub"],
+                    tags: ["HTML5", "CSS3", "JavaScript", "Firebase Studio", "Gemini 2.5 Flash", "Git", "GitHub"],
                     githubUrl: "https://github.com/ricardaoquadros-jpg/Tcc",
                 },
                 {
