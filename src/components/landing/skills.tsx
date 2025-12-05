@@ -35,7 +35,7 @@ const skillIcons: Record<string, string> = {
 };
 
 // Skills que precisam de ícone maior
-const largerIconSkills = ["Firebase"];
+const largerIconSkills: string[] = [];
 
 function SkillCard({ skill }: { skill: string }) {
   const iconUrl = skillIcons[skill];
