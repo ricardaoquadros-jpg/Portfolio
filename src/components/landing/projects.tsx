@@ -23,14 +23,14 @@ export function Projects() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div className="flex flex-col gap-6 max-w-4xl mx-auto">
         {projectsContent.items.map((project) => (
-          <SpotlightCard 
-            key={project.title} 
-            className="overflow-hidden shadow-lg hover:shadow-primary/30 transition-all duration-300 flex flex-col group rounded-xl"
+          <SpotlightCard
+            key={project.title}
+            className="overflow-hidden shadow-lg hover:shadow-primary/30 transition-all duration-300 flex flex-col md:flex-row group rounded-xl"
           >
-            {/* Imagem do projeto */}
-            <div className="relative h-48 w-full overflow-hidden">
+            {/* Imagem do projeto - à esquerda */}
+            <div className="relative w-full md:w-72 h-48 md:h-auto md:min-h-[200px] flex-shrink-0 overflow-hidden">
               {project.image && (
                 <Image
                   src={project.image.imageUrl}
@@ -40,28 +40,27 @@ export function Projects() {
                   data-ai-hint={project.image.imageHint}
                 />
               )}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             </div>
 
-            {/* Conteúdo */}
+            {/* Conteúdo - à direita */}
             <div className="flex flex-col flex-grow p-5">
-              <h3 className="font-headline text-lg font-bold text-foreground mb-2">
+              <h3 className="font-headline text-xl font-bold text-foreground mb-3">
                 {project.title}
               </h3>
-              <p className="text-sm text-muted-foreground line-clamp-3 flex-grow">
+              <p className="text-sm text-muted-foreground flex-grow mb-4">
                 {project.description}
               </p>
-            </div>
 
-            {/* Botão de repositório */}
-            <div className="p-5 pt-0">
+              {/* Botão de repositório */}
               {project.githubUrl && (
-                <Button asChild variant="outline" className="w-full">
-                  <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                    <Github className="mr-2 h-4 w-4" />
-                    {projectsContent.repositoryButton}
-                  </Link>
-                </Button>
+                <div>
+                  <Button asChild variant="outline" size="sm">
+                    <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                      <Github className="mr-2 h-4 w-4" />
+                      {projectsContent.repositoryButton}
+                    </Link>
+                  </Button>
+                </div>
               )}
             </div>
           </SpotlightCard>
