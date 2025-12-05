@@ -194,23 +194,23 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
             items: [
                 {
                     title: "Portfólio Pessoal",
-                    description: "Este é o próprio site que você está visitando, desenvolvido para mostrar minhas habilidades e projetos. Foi construído com tecnologias modernas, incluindo IA para priorização de competências.",
+                    description: "Site pessoal responsivo com tema dark/light, animações suaves e integração com IA do Google para priorização inteligente de competências. Inclui sistema de internacionalização (PT-BR/EN).",
                     image: PlaceHolderImages.find(img => img.id === 'project-portfolio-v1'),
-                    tags: ["Next.js", "React", "TailwindCSS", "ShadCN", "Genkit (AI)"],
+                    tags: ["Next.js 15", "React 18", "TypeScript", "TailwindCSS", "ShadCN/Radix UI", "Google Genkit AI", "Firebase", "Lucide Icons", "Zod", "React Hook Form"],
                     githubUrl: "https://github.com/ricardaoquadros-jpg/Portfolio",
                 },
                 {
                     title: "Frontend vs. Backend",
-                    description: "Site didático desenvolvido como TCC na E.E.E.M. Dr. Solon Tavares, explicando de forma clara a diferença entre Frontend e Backend no desenvolvimento web.",
+                    description: "Site educacional interativo desenvolvido como TCC, explicando as diferenças entre Frontend e Backend com exemplos práticos, diagramas e conteúdo gerado por IA.",
                     image: PlaceHolderImages.find(img => img.id === 'project-frontend-backend'),
-                    tags: ["HTML5", "CSS3", "JavaScript", "Firebase Studio", "Gemini API"],
+                    tags: ["HTML5", "CSS3", "JavaScript", "Firebase Studio", "Gemini 3 Pro API", "Git", "GitHub"],
                     githubUrl: "https://github.com/ricardaoquadros-jpg/Tcc",
                 },
                 {
                     title: "Protocolo de Entrega",
-                    description: "Sistema web desenvolvido para a Prefeitura de Guaíba que gera protocolos de entrega com assinatura digital, envio automático por e-mail e painel administrativo.",
+                    description: "Sistema completo para a Prefeitura de Guaíba com geração de protocolos, assinatura digital via Canvas, geração de PDF, envio automático por e-mail e painel administrativo com dashboard.",
                     image: PlaceHolderImages.find(img => img.id === 'project-protocolo-entrega'),
-                    tags: ["PHP", "MySQL", "JavaScript", "HTML5", "CSS3", "PHPMailer"],
+                    tags: ["PHP", "MySQL", "JavaScript", "HTML5", "CSS3", "PHPMailer", "Canvas API", "PDF.js", "Vercel"],
                     githubUrl: "https://github.com/ricardaoquadros-jpg/ProtocolodeEntrega",
                 }
             ],
@@ -367,23 +367,23 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
             items: [
                 {
                     title: "Personal Portfolio",
-                    description: "This is the very site you are visiting, developed to showcase my skills and projects. It was built with modern technologies, including AI for skill prioritization.",
+                    description: "Responsive personal website with dark/light theme, smooth animations and Google AI integration for intelligent skill prioritization. Includes internationalization system (PT-BR/EN).",
                     image: PlaceHolderImages.find(img => img.id === 'project-portfolio-v1'),
-                    tags: ["Next.js", "React", "TailwindCSS", "ShadCN", "Genkit (AI)"],
+                    tags: ["Next.js 15", "React 18", "TypeScript", "TailwindCSS", "ShadCN/Radix UI", "Google Genkit AI", "Firebase", "Lucide Icons", "Zod", "React Hook Form"],
                     githubUrl: "https://github.com/ricardaoquadros-jpg/Portfolio",
                 },
                 {
                     title: "Frontend vs. Backend",
-                    description: "Educational website developed as a final project at E.E.E.M. Dr. Solon Tavares, clearly explaining the difference between Frontend and Backend in web development.",
+                    description: "Interactive educational website developed as a final project, explaining the differences between Frontend and Backend with practical examples, diagrams and AI-generated content.",
                     image: PlaceHolderImages.find(img => img.id === 'project-frontend-backend'),
-                    tags: ["HTML5", "CSS3", "JavaScript", "Firebase Studio", "Gemini API"],
+                    tags: ["HTML5", "CSS3", "JavaScript", "Firebase Studio", "Gemini 3 Pro API", "Git", "GitHub"],
                     githubUrl: "https://github.com/ricardaoquadros-jpg/Tcc",
                 },
                 {
                     title: "Delivery Protocol",
-                    description: "Web system developed for Guaíba City Hall that generates delivery protocols with digital signature, automatic email sending and administrative panel.",
+                    description: "Complete system for Guaíba City Hall with protocol generation, digital signature via Canvas, PDF generation, automatic email sending and administrative panel with dashboard.",
                     image: PlaceHolderImages.find(img => img.id === 'project-protocolo-entrega'),
-                    tags: ["PHP", "MySQL", "JavaScript", "HTML5", "CSS3", "PHPMailer"],
+                    tags: ["PHP", "MySQL", "JavaScript", "HTML5", "CSS3", "PHPMailer", "Canvas API", "PDF.js", "Vercel"],
                     githubUrl: "https://github.com/ricardaoquadros-jpg/ProtocolodeEntrega",
                 }
             ],
