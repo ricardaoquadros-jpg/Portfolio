@@ -22,9 +22,9 @@ const skillIcons: Record<string, string> = {
   // Ferramentas e Tecnologias
   "Power BI": "https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg",
   "Android Studio": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg",
-  "Pacote Office": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Microsoft_Office_logo_%282019%E2%80%93present%29.svg",
-  "Office Suite": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Microsoft_Office_logo_%282019%E2%80%93present%29.svg",
-  "Firebase": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+  "Pacote Office": "https://img.icons8.com/color/96/microsoft-office-2019.png",
+  "Office Suite": "https://img.icons8.com/color/96/microsoft-office-2019.png",
+  "Firebase": "https://firebase.google.com/static/images/brand-guidelines/logo-vertical.png?hl=pt-br",
   "AI": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg",
   "Git": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
   "GitHub": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
