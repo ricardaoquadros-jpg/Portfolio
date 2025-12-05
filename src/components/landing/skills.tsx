@@ -24,7 +24,7 @@ const skillIcons: Record<string, string> = {
   "Android Studio": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg",
   "Pacote Office": "https://images.icon-icons.com/1156/PNG/512/1486565573-microsoft-office_81557.png",
   "Office Suite": "https://images.icon-icons.com/1156/PNG/512/1486565573-microsoft-office_81557.png",
-  "Firebase": "https://www.gstatic.com/devrel-devsite/prod/v0e0f589edd85502a40d78d7d0825db8ea5ef3b99ab4070381ee86977c9168730/firebase/images/touchicon-180.png",
+  "Firebase": "https://images.seeklogo.com/logo-png/61/1/firebase-icon-logo-png_seeklogo-615938.png",
   "AI": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg",
   "Git": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
   "GitHub": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
