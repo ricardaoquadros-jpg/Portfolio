@@ -1,10 +1,8 @@
 "use client";
 import React from "react";
 import { Section } from "@/components/shared/section";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Github, ExternalLink } from "lucide-react";
+import { Github } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/context/language-context";
@@ -25,50 +23,46 @@ export function Projects() {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-8 max-w-3xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {projectsContent.items.map((project) => (
-          <SpotlightCard key={project.title} className="overflow-hidden shadow-lg hover:shadow-primary/20 transition-all duration-300 flex flex-col md:flex-row">
-            <div className="md:w-1/3 relative h-64 md:h-auto group">
+          <SpotlightCard 
+            key={project.title} 
+            className="overflow-hidden shadow-lg hover:shadow-primary/30 transition-all duration-300 flex flex-col group rounded-xl"
+          >
+            {/* Imagem do projeto */}
+            <div className="relative h-48 w-full overflow-hidden">
               {project.image && (
-                <Link href={project.githubUrl || "/projects"} target={project.githubUrl ? "_blank" : undefined} rel={project.githubUrl ? "noopener noreferrer" : undefined} className="block w-full h-full">
-                  <Image
-                    src={project.image.imageUrl}
-                    alt={project.image.description}
-                    fill
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    data-ai-hint={project.image.imageHint}
-                  />
-                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-white p-4">
-                    <ExternalLink className="h-8 w-8 mb-2" />
-                    <span className="font-bold text-lg text-center">{project.githubUrl ? projectsContent.repositoryButton : translations[language].projects.viewProjectButton}</span>
-                  </div>
-                </Link>
+                <Image
+                  src={project.image.imageUrl}
+                  alt={project.image.description}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  data-ai-hint={project.image.imageHint}
+                />
               )}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             </div>
-            <div className="md:w-2/3 flex flex-col">
-              <CardHeader>
-                <Link href="/projects">
-                  <CardTitle className="font-headline text-xl text-left hover:underline">{project.title}</CardTitle>
-                </Link>
-              </CardHeader>
-              <CardContent className="flex-grow">
-                <CardDescription className="mb-4 text-left">{project.description}</CardDescription>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <Badge key={tag} variant="secondary">{tag}</Badge>
-                  ))}
-                </div>
-              </CardContent>
-              <CardFooter>
-                {project.githubUrl && (
-                  <Button asChild variant="outline">
-                    <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <Github className="mr-2 h-4 w-4" />
-                      {projectsContent.repositoryButton}
-                    </Link>
-                  </Button>
-                )}
-              </CardFooter>
+
+            {/* Conteúdo */}
+            <div className="flex flex-col flex-grow p-5">
+              <h3 className="font-headline text-lg font-bold text-foreground mb-2">
+                {project.title}
+              </h3>
+              <p className="text-sm text-muted-foreground line-clamp-3 flex-grow">
+                {project.description}
+              </p>
+            </div>
+
+            {/* Botão de repositório */}
+            <div className="p-5 pt-0">
+              {project.githubUrl && (
+                <Button asChild variant="outline" className="w-full">
+                  <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                    <Github className="mr-2 h-4 w-4" />
+                    {projectsContent.repositoryButton}
+                  </Link>
+                </Button>
+              )}
             </div>
           </SpotlightCard>
         ))}
