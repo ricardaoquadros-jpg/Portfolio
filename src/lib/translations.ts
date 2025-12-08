@@ -157,6 +157,12 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                     period: "2022 – 2024",
                     url: "https://www.escol.as/245742-colegio-estadual-augusto-meyer",
                 },
+                {
+                    institution: "Yázigi",
+                    course: "Curso de Inglês",
+                    period: "2022 – 2023",
+                    url: "https://www.yazigi.com.br/",
+                },
             ],
         },
         experience: {
@@ -329,6 +335,12 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                     course: "High School",
                     period: "2022 – 2024",
                     url: "https://www.escol.as/245742-colegio-estadual-augusto-meyer",
+                },
+                {
+                    institution: "Yázigi",
+                    course: "English Course",
+                    period: "2022 – 2023",
+                    url: "https://www.yazigi.com.br/",
                 },
             ],
         },
