@@ -20,14 +20,14 @@ const qualityIcons: Record<string, React.ReactNode> = {
     "Logical Reasoning": <Brain className="w-6 h-6" />,
 };
 
-// Bandeiras dos países
+// Bandeiras dos países (usando imagens SVG para melhor visualização)
 const languageFlags: Record<string, string> = {
-    "Inglês": "🇺🇸",
-    "English": "🇺🇸",
-    "Espanhol": "🇪🇸",
-    "Spanish": "🇪🇸",
-    "Português": "🇧🇷",
-    "Portuguese": "🇧🇷",
+    "Inglês": "https://flagcdn.com/w80/us.png",
+    "English": "https://flagcdn.com/w80/us.png",
+    "Espanhol": "https://flagcdn.com/w80/es.png",
+    "Spanish": "https://flagcdn.com/w80/es.png",
+    "Português": "https://flagcdn.com/w80/br.png",
+    "Portuguese": "https://flagcdn.com/w80/br.png",
 };
 
 // Links de certificados
@@ -102,7 +102,13 @@ function LanguageCard({ lang, level }: { lang: string; level: string }) {
         <div className="group relative bg-card border border-border rounded-2xl p-6 shadow-sm hover:shadow-lg hover:border-primary/30 transition-all duration-300 hover:-translate-y-1">
             <div className="flex items-start gap-4">
                 {/* Bandeira */}
-                <div className="text-4xl">{flag}</div>
+                <div className="w-12 h-12 rounded-lg overflow-hidden flex items-center justify-center bg-muted/30">
+                    <img
+                        src={flag}
+                        alt={lang}
+                        className="w-full h-full object-cover"
+                    />
+                </div>
 
                 {/* Conteúdo */}
                 <div className="flex-1">
