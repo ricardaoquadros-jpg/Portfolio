@@ -126,25 +126,31 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
         },
         hero: {
             name: "Ricardo Quadros",
-            title: "Estudante de Engenharia da Computação | Futuro Profissional de TI",
+            title: "Estudante de Ciência da Computação | Tests & Qualification Analyst @ TK Elevator",
             aboutButton: "Sobre Mim",
             contactButton: "Contato",
         },
         about: {
             title: "Sobre Mim",
-            paragraph1: "Olá! Sou Ricardo Quadros, um jovem de 18 anos apaixonado por tecnologia, residente em Guaíba, Rio Grande do Sul.",
-            paragraph2: "Atualmente, estou imerso no mundo da Engenharia da Computação, sempre em busca de novos conhecimentos e desafios. Meu principal objetivo é construir uma carreira sólida na área de tecnologia, aplicando minhas habilidades para criar soluções inovadoras e eficientes.",
+            paragraph1: "Olá! Sou Ricardo Quadros, profissional de TI com experiência em QA de software embarcado, infraestrutura de redes e desenvolvimento web. Tenho 19 anos e resido em Guaíba, Rio Grande do Sul.",
+                        paragraph2: "Atualmente atuo como Tests & Qualification Analyst na TK Elevator e curso Ciência da Computação na ULBRA. Minha stack inclui Python para automação de testes em sistemas Linux embarcados (Raspberry Pi), além de infraestrutura com Zabbix, Grafana e Sophos. Inglês certificado C2 (EF SET 75/100).",
         },
         education: {
             title: "Formação Acadêmica",
             subtitle: "Minha jornada educacional na área de tecnologia.",
             items: [
-                {
-                    institution: "Universidade Estadual do Rio Grande do Sul (UERGS)",
-                    course: "Engenharia da Computação",
-                    period: "2025 – Presente",
-                    url: "https://www.uergs.edu.br/engenharia-de-computacao",
-                },
+                            {
+                                institution: "Universidade Luterana do Brasil (ULBRA)",
+                                course: "Ciência da Computação (Bacharelado)",
+                                period: "2026 – 2030",
+                                url: "https://www.ulbra.br/cursos/graduacao/ciencia-da-computacao",
+                            },
+                            {
+                                institution: "Universidade Estadual do Rio Grande do Sul (UERGS)",
+                                course: "Engenharia da Computação (Transferido)",
+                                period: "2025 – 2026",
+                                url: "https://www.uergs.edu.br/engenharia-de-computacao",
+                            },
                 {
                     institution: "Escola Estadual de Ensino Médio Dr. Solon Tavares",
                     course: "Técnico em Informática",
@@ -166,31 +172,32 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
             ],
         },
         experience: {
-            title: "Experiência Profissional",
-            subtitle: "Atuação prática e desenvolvimento de competências no mercado de trabalho.",
-            company: "Prefeitura de Guaíba",
-            role: "Técnico de TI",
-            period: "Agosto/2025 – Presente",
-            responsibilities: "",
-            experienceDetails: [
-                "Dia 20/08/2025, iniciei minha trajetória na Prefeitura de Guaíba no setor de Atendimento Remoto, oportunidade que conquistei após minha aprovação no vestibular para Engenharia da Computação. Nesse período, desenvolvi atividades essenciais de suporte técnico, como reset de senhas, utilização do AnyDesk para acesso remoto, instalação de impressoras e configuração de softwares para os usuários dos diferentes setores.",
-                "Com o bom desempenho e evolução constante, fui promovido em 10/11/2025 para o setor de Infraestrutura, onde atuo atualmente. Nessa área, passei a lidar com demandas mais avançadas, envolvendo administração de redes, gerenciamento de equipamentos e configurações críticas. No meu dia a dia, utilizo plataformas como mRemoteNG, Omada Controller, Sophos Firewall, Asana, Zimbra e Zabbix, realizando também instalação de impressoras, implantação de certificados digitais e apoio geral à manutenção da infraestrutura de TI do município."
-            ],
-            highlights: [
-                "Suporte em Hardware e Software", "Manutenção de Computadores", "Gerenciamento de Redes",
-                "Atendimento a Usuários", "Configuração de Computadores e Impressoras", "Cabeamento",
-                "Instalação de Software", "Reset de Senhas", "Atividades Pertinentes à Área",
-            ],
+                    title: "Experiência Profissional",
+                    subtitle: "Atuação prática e desenvolvimento de competências no mercado de trabalho.",
+                    company: "TK Elevator",
+                    role: "Tests & Qualification Analyst (Estágio)",
+                    period: "Junho/2026 – Presente",
+                    responsibilities: "",
+                    experienceDetails: [
+                        "Atuo na qualificação e validação de sistemas embarcados para mobilidade urbana, utilizando Python para automação de testes em ambientes Linux (Raspberry Pi). Realizo preparação de simuladores, suporte às equipes de teste e estabilização da testing farm.",
+                        "Anteriormente, atuei como Estagiário de TI na Prefeitura de Guaíba (ago/2025 – jun/2026), onde comecei no suporte técnico remoto (+250 chamados resolvidos) e fui promovido para Infraestrutura e Redes. Lá gerenciei redes com Omada Controller, monitoramento com Zabbix/Grafana, Sophos Firewall e desenvolvi um sistema web PHP/MySQL para controle de protocolos adotado por toda a equipe.",
+                    ],
+                    highlights: [
+                        "Embedded Software Testing", "Python Automation", "Linux (Raspberry Pi)",
+                        "Test Farm Stability", "Simulator Preparation", "Test Qualification & Validation",
+                    ],
         },
         skills: {
             title: "Competências Técnicas",
             subtitle: "Habilidades e tecnologias que domino, priorizadas por relevância e sofisticação.",
             categories: {
-                "Linguagens de Programação": ["Python", "Java", "C", "HTML", "CSS", "PHP", "Assembly"],
-                "Banco de Dados": ["MySQL"],
-                "Ferramentas e Tecnologias": ["Power BI", "Android Studio", "Pacote Office", "Firebase", "AI"],
-                "Hardware": ["Montagem e manutenção de computadores"],
-            },
+                            "Linguagens de Programação": ["Python", "JavaScript", "TypeScript", "PHP", "SQL", "C"],
+                            "Frameworks & Bibliotecas": ["React", "Next.js", "Tailwind CSS"],
+                            "Ferramentas de Teste & QA": ["Embedded Testing", "Test Automation", "Simuladores"],
+                            "Infraestrutura & Redes": ["Linux", "Zabbix", "Grafana", "Sophos Firewall", "Omada Controller"],
+                            "DevOps & Versionamento": ["Git", "GitHub", "CI/CD"],
+                            "Banco de Dados": ["MySQL", "PostgreSQL"],
+                        },
         },
         projects: {
             title: "Projetos",
@@ -225,11 +232,14 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
             title: "Cursos e Certificações",
             subtitle: "Minhas qualificações e aprendizados contínuos.",
             items: [
-                { name: "Power BI", institution: "Fundação Bradesco", url: "https://www.ev.org.br/cursos/preparando-dados-para-analise-microsoft-power-bi" },
-                { name: "Python Básico", institution: "Fundação Bradesco", url: "https://www.ev.org.br/cursos/linguagem-de-programacao-python-basico" },
-                { name: "HTML5", institution: "IFRS", url: "https://estude.ifrs.edu.br/cursos/html-tabelas-e-formularios/" },
-                { name: "EF SET English Certificate C2", institution: "EF Standard English Test", url: "https://cert.efset.org/wFvpjR" },
-            ],
+                            { name: "Relational Databases and SQL", institution: "Stanford Online (edX)", url: "https://www.edx.org/learn/sql/stanford-university-databases-relational-databases-and-sql" },
+                            { name: "Claude Code 101", institution: "Anthropic", url: "https://learn.anthropic.com/" },
+                            { name: "Intro to CS with Python", institution: "MIT OpenCourseWare", url: "https://ocw.mit.edu/courses/6-100l-introduction-to-cs-and-programming-using-python-fall-2022/" },
+                            { name: "EF SET English Certificate C2", institution: "EF Standard English Test", url: "https://cert.efset.org/wFvpjR" },
+                            { name: "Python Básico", institution: "Fundação Bradesco", url: "https://www.ev.org.br/cursos/linguagem-de-programacao-python-basico" },
+                            { name: "HTML5", institution: "IFRS", url: "https://estude.ifrs.edu.br/cursos/html-tabelas-e-formularios/" },
+                            { name: "Power BI", institution: "Fundação Bradesco", url: "https://www.ev.org.br/cursos/preparando-dados-para-analise-microsoft-power-bi" },
+                        ],
         },
         languagesAndQualities: {
             languages: {
@@ -305,25 +315,31 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
         },
         hero: {
             name: "Ricardo Quadros",
-            title: "Computer Engineering Student | Future IT Professional",
+            title: "Computer Science Student | Tests & Qualification Analyst @ TK Elevator",
             aboutButton: "About Me",
             contactButton: "Contact",
         },
         about: {
             title: "About Me",
-            paragraph1: "Hello! I'm Ricardo Quadros, an 18-year-old passionate about technology, living in Guaíba, Rio Grande do Sul.",
-            paragraph2: "Currently, I'm immersed in the world of Computer Engineering, always seeking new knowledge and challenges. My main goal is to build a solid career in the technology field, applying my skills to create innovative and efficient solutions.",
+            paragraph1: "Hello! I'm Ricardo Quadros, an IT professional with experience in embedded software QA, network infrastructure, and web development. I'm 19 years old and live in Guaíba, Rio Grande do Sul.",
+                        paragraph2: "I currently work as a Tests & Qualification Analyst at TK Elevator and study Computer Science at ULBRA. My tech stack includes Python for test automation on embedded Linux systems (Raspberry Pi), plus infrastructure with Zabbix, Grafana, and Sophos. English certified C2 (EF SET 75/100).",
         },
         education: {
             title: "Education",
             subtitle: "My educational journey in the technology field.",
             items: [
-                {
-                    institution: "State University of Rio Grande do Sul (UERGS)",
-                    course: "Computer Engineering",
-                    period: "2025 – Present",
-                    url: "https://www.uergs.edu.br/engenharia-de-computacao",
-                },
+                            {
+                                institution: "Lutheran University of Brazil (ULBRA)",
+                                course: "Computer Science (Bachelor's)",
+                                period: "2026 – 2030",
+                                url: "https://www.ulbra.br/cursos/graduacao/ciencia-da-computacao",
+                            },
+                            {
+                                institution: "State University of Rio Grande do Sul (UERGS)",
+                                course: "Computer Engineering (Transferred)",
+                                period: "2025 – 2026",
+                                url: "https://www.uergs.edu.br/engenharia-de-computacao",
+                            },
                 {
                     institution: "Dr. Solon Tavares State High School",
                     course: "IT Technician",
@@ -345,31 +361,32 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
             ],
         },
         experience: {
-            title: "Professional Experience",
-            subtitle: "Practical experience and skill development in the job market.",
-            company: "Guaíba City Hall",
-            role: "IT Technician",
-            period: "August/2025 – Present",
-            responsibilities: "",
-            experienceDetails: [
-                "On 08/20/2025, I began my journey at the Guaíba City Hall in the Remote Support sector, an opportunity I earned after passing the entrance exam for Computer Engineering. During this period, I developed essential technical support skills, such as resetting passwords, using AnyDesk for remote access, installing printers, and configuring software for users in different departments.",
-                "With good performance and continuous evolution, I was promoted on 11/10/2025 to the Infrastructure sector, where I currently work. In this area, I started handling more advanced demands, involving network administration, equipment management, and critical configurations. In my day-to-day, I use platforms like mRemoteNG, Omada Controller, Sophos Firewall, Asana, Zimbra, and Zabbix, also performing printer installations, digital certificate implementation, and general support for the maintenance of the municipality's IT infrastructure."
-            ],
-            highlights: [
-                "Hardware and Software Support", "Computer Maintenance", "Network Management",
-                "User Support", "Computer and Printer Setup", "Cabling",
-                "Software Installation", "Password Reset", "Related Activities",
-            ],
+                    title: "Professional Experience",
+                    subtitle: "Practical experience and skill development in the job market.",
+                    company: "TK Elevator",
+                    role: "Tests & Qualification Analyst (Intern)",
+                    period: "June/2026 – Present",
+                    responsibilities: "",
+                    experienceDetails: [
+                        "I work on qualification and validation of embedded systems for urban mobility, using Python for test automation on Linux environments (Raspberry Pi). I handle simulator setup, testing team support, and test farm stability.",
+                        "Previously, I worked as an IT Intern at Guaíba City Hall (Aug/2025 – Jun/2026), starting in remote technical support (+250 tickets resolved) and being promoted to Infrastructure & Networks. There I managed networks with Omada Controller, monitoring with Zabbix/Grafana, Sophos Firewall, and developed a PHP/MySQL web system for protocol management adopted by the entire team.",
+                    ],
+                    highlights: [
+                        "Embedded Software Testing", "Python Automation", "Linux (Raspberry Pi)",
+                        "Test Farm Stability", "Simulator Preparation", "Test Qualification & Validation",
+                    ],
         },
         skills: {
             title: "Technical Skills",
             subtitle: "Skills and technologies I master, prioritized by relevance and sophistication.",
             categories: {
-                "Programming Languages": ["Python", "Java", "C", "HTML", "CSS", "PHP", "Assembly"],
-                "Database": ["MySQL"],
-                "Tools and Technologies": ["Power BI", "Android Studio", "Office Suite", "Firebase", "AI"],
-                "Hardware": ["Computer assembly and maintenance"],
-            },
+                            "Programming Languages": ["Python", "JavaScript", "TypeScript", "PHP", "SQL", "C"],
+                            "Frameworks & Libraries": ["React", "Next.js", "Tailwind CSS"],
+                            "Testing & QA Tools": ["Embedded Testing", "Test Automation", "Simulators"],
+                            "Infrastructure & Networks": ["Linux", "Zabbix", "Grafana", "Sophos Firewall", "Omada Controller"],
+                            "DevOps & Version Control": ["Git", "GitHub", "CI/CD"],
+                            "Databases": ["MySQL", "PostgreSQL"],
+                        },
         },
         projects: {
             title: "Projects",
@@ -404,11 +421,14 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
             title: "Courses and Certifications",
             subtitle: "My qualifications and continuous learning.",
             items: [
-                { name: "Power BI", institution: "Bradesco Foundation", url: "https://www.ev.org.br/cursos/preparando-dados-para-analise-microsoft-power-bi" },
-                { name: "Basic Python", institution: "Bradesco Foundation", url: "https://www.ev.org.br/cursos/linguagem-de-programacao-python-basico" },
-                { name: "HTML5", institution: "IFRS", url: "https://estude.ifrs.edu.br/cursos/html-tabelas-e-formularios/" },
-                { name: "EF SET English Certificate C2", institution: "EF Standard English Test", url: "https://cert.efset.org/wFvpjR" },
-            ],
+                            { name: "Relational Databases and SQL", institution: "Stanford Online (edX)", url: "https://www.edx.org/learn/sql/stanford-university-databases-relational-databases-and-sql" },
+                            { name: "Claude Code 101", institution: "Anthropic", url: "https://learn.anthropic.com/" },
+                            { name: "Intro to CS with Python", institution: "MIT OpenCourseWare", url: "https://ocw.mit.edu/courses/6-100l-introduction-to-cs-and-programming-using-python-fall-2022/" },
+                            { name: "EF SET English Certificate C2", institution: "EF Standard English Test", url: "https://cert.efset.org/wFvpjR" },
+                            { name: "Basic Python", institution: "Bradesco Foundation", url: "https://www.ev.org.br/cursos/linguagem-de-programacao-python-basico" },
+                            { name: "HTML5", institution: "IFRS", url: "https://estude.ifrs.edu.br/cursos/html-tabelas-e-formularios/" },
+                            { name: "Power BI", institution: "Bradesco Foundation", url: "https://www.ev.org.br/cursos/preparando-dados-para-analise-microsoft-power-bi" },
+                        ],
         },
         languagesAndQualities: {
             languages: {
