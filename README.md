@@ -1,84 +1,114 @@
-# 🌐 Portfólio Pessoal – Ricardo Quadros
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![Antigravity](https://img.shields.io/badge/Antigravity_IDE-000000?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase_Studio-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
-![Gemini 3 Pro](https://img.shields.io/badge/Gemini_3_Pro-AUTO?style=for-the-badge&logo=google&logoColor=white)
-![ChatGPT 5.1](https://img.shields.io/badge/ChatGPT_5.1-00A67D?style=for-the-badge&logo=openai&logoColor=white)
+# 🌐 Portfolio — Ricardo Quadros
 
-Este repositório contém o código-fonte do meu portfólio pessoal, desenvolvido utilizando ferramentas modernas e workflows baseados em prompts. O principal objetivo deste projeto é apresentar minha trajetória, habilidades e projetos na área de **Engenharia de Computação** e **Tecnologia da Informação**.
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-000000?style=for-the-badge&logo=shadcnui&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
-O desenvolvimento foi realizado através da **IDE Antigravity**, com fluxos de criação orientados a prompts e refinamento utilizando o modelo **Gemini 3 Pro**, garantindo agilidade, consistência visual e um design moderno.
-
----
-
-## 🚀 Funcionalidades do Portfólio
-
-- Página inicial apresentando minha identidade profissional  
-- Seção de projetos com links diretos para repositórios  
-- Sobre mim com um resumo claro e objetivo  
-- Contato e redes sociais organizadas de forma responsiva  
-- Layout moderno, responsivo e leve  
+> **Site:** [ricardoquadros.pro](https://ricardoquadros.pro)  
+> **Stack:** Next.js 15 · React 18 · TypeScript · Tailwind CSS · shadcn/ui  
+> **Deploy:** Vercel (auto-deploy via GitHub)
 
 ---
 
-## 🛠 Tecnologias Utilizadas
+## Sobre
 
-### **Frontend**
-- HTML5  
-- CSS3  
-- JavaScript  
-- Tailwind CSS  
+Portfólio pessoal bilíngue (PT-BR/EN) desenvolvido para apresentar minha trajetória profissional, projetos e habilidades técnicas. Conta com tema dark/light, animações suaves e design responsivo.
 
-### **Ferramentas de Desenvolvimento**
-- Antigravity IDE  
-- Firebase Studio  
-- Git & GitHub  
-- Fluxo de desenvolvimento guiado por prompts (ChatGPT 5.1 e Gemini 3 Pro)
+Atualmente sou **Tests & Qualification Analyst @ TK Elevator** e curso **Ciência da Computação @ ULBRA**.
 
 ---
 
-## 📦 Estrutura do Projeto
-```bash
-/
-├─ public/
-│ ├─ index.html
-│ ├─ assets/
-│ └─ styles/
-├─ firebase.json
-└─ README.md
+## Funcionalidades
+
+- **Hero** com identidade profissional e CTAs
+- **Sobre Mim** com resumo da trajetória e stack
+- **Formação Acadêmica** com timeline
+- **Experiência Profissional** com detalhes das empresas
+- **Competências Técnicas** organizadas por categoria com ícones
+- **Projetos** com links para repositórios
+- **Certificações** com links para credenciais
+- **Contato** com email, telefone, redes sociais e link para currículo
+- **Tema dark/light** com toggle
+- **Internacionalização PT-BR / EN** via context
+
+---
+
+## Tecnologias
+
+| Categoria | Tecnologias |
+|-----------|-------------|
+| Framework | Next.js 15 (App Router) |
+| UI | React 18, Tailwind CSS, shadcn/ui, Radix UI |
+| Linguagem | TypeScript |
+| Ícones | Lucide React, Devicon |
+| Deploy | Vercel (integração GitHub) |
+| Controle de versão | Git / GitHub |
+
+---
+
+## Estrutura
+
+```
+src/
+├── app/
+│   ├── page.tsx              # Página principal
+│   ├── projects/
+│   │   └── page.tsx          # Página de projetos
+│   └── layout.tsx            # Layout global
+├── components/
+│   ├── landing/              # Componentes da home
+│   │   ├── hero.tsx
+│   │   ├── about.tsx
+│   │   ├── education.tsx
+│   │   ├── experience.tsx
+│   │   ├── skills.tsx
+│   │   ├── projects.tsx
+│   │   ├── certifications.tsx
+│   │   ├── languages-and-qualities.tsx
+│   │   ├── contact.tsx
+│   │   └── footer.tsx
+│   ├── shared/               # Componentes reutilizáveis
+│   ├── ui/                   # shadcn/ui components
+│   └── icons.tsx
+├── context/
+│   └── language-context.tsx  # Contexto de internacionalização
+├── lib/
+│   ├── translations.ts       # Traduções PT-BR / EN
+│   └── placeholder-images.ts
+└── hooks/
 ```
 
 ---
 
-## 📄 Sobre o Projeto
+## Rodar localmente
 
-O foco principal deste portfólio é apresentar minha evolução profissional e acadêmica, reunindo:
+```bash
+git clone https://github.com/ricardaoquadros-jpg/Portfolio.git
+cd Portfolio
+npm install
+npm run dev
+```
 
-- Projetos acadêmicos  
-- Projetos desenvolvidos na Prefeitura de Guaíba  
-- Experimentos com IA  
-- Aplicações web  
-- Projetos pessoais e estudos  
-
-A criação orientada a prompts com Antigravity e Firebase Studio permitiu uma construção rápida e eficiente, explorando novas abordagens de design, organização e produção de conteúdo digital.
+Acesse `http://localhost:3000`.
 
 ---
 
-## 🧑‍💻 Autor
+## Deploy
+
+O deploy é automático via **Vercel** — cada push na branch `main` dispara um novo build.
+
+---
+
+## Autor
 
 **Ricardo Quadros**  
-- Estudante de Engenharia da Computação na UERGS  
-- Técnico em Informática na Dr. Solon Tavares 
-- Estagiário de Tecnologia e Informação – Prefeitura de Guaíba  
-- Guaíba, RS – Brasil
+Tests & Qualification Analyst @ TK Elevator  
+Ciência da Computação @ ULBRA  
+Guaíba, RS — Brasil
 
----
-
-## 📫 Contato
-
-- GitHub: https://github.com/ricardaoquadros-jpg  
-- Email: ricardaoquadros@gmail.com
-- Linkedin: https://www.linkedin.com/in/ricardopquadros/
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/ricardopquadros)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ricardaoquadros-jpg)
+[![Site](https://img.shields.io/badge/Site-ricardoquadros.pro-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://ricardoquadros.pro)
