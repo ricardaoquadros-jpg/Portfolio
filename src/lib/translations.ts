@@ -48,6 +48,7 @@ export interface Translation {
             period: string;
             details: string[];
             highlights: string[];
+            logoUrl: string;
         }[];
     };
     skills: {
@@ -188,6 +189,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                                 "Embedded Software Testing", "Python Automation", "Linux (Raspberry Pi)",
                                 "Test Farm Stability", "Simulator Preparation", "Test Qualification & Validation",
                             ],
+                            logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Thyssenkrupp_Elevator_AG_Logo_2021.svg/320px-Thyssenkrupp_Elevator_AG_Logo_2021.svg",
                         },
                         {
                             company: "Prefeitura Municipal de Guaíba",
@@ -202,6 +204,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                                 "PHP/MySQL", "Omada Controller", "Zabbix/Grafana",
                                 "Sophos Firewall", "Certificados Digitais", "Desenvolvimento Web",
                             ],
+                            logoUrl: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Bras%C3%A3o_de_Gua%C3%ADba.svg",
                         },
                         {
                             company: "Prefeitura Municipal de Guaíba",
@@ -215,6 +218,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                                 "Suporte Técnico", "+250 Chamados", "AnyDesk",
                                 "Windows", "Hardware/Software", "Treinamento de Usuários",
                             ],
+                            logoUrl: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Bras%C3%A3o_de_Gua%C3%ADba.svg",
                         },
                     ],
                 },
@@ -407,6 +411,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                                 "Embedded Software Testing", "Python Automation", "Linux (Raspberry Pi)",
                                 "Test Farm Stability", "Simulator Preparation", "Test Qualification & Validation",
                             ],
+                            logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Thyssenkrupp_Elevator_AG_Logo_2021.svg/320px-Thyssenkrupp_Elevator_AG_Logo_2021.svg",
                         },
                         {
                             company: "Guaíba City Hall",
@@ -421,6 +426,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                                 "PHP/MySQL", "Omada Controller", "Zabbix/Grafana",
                                 "Sophos Firewall", "Digital Certificates", "Web Development",
                             ],
+                            logoUrl: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Bras%C3%A3o_de_Gua%C3%ADba.svg",
                         },
                         {
                             company: "Guaíba City Hall",
@@ -434,6 +440,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                                 "Technical Support", "+250 Tickets", "AnyDesk",
                                 "Windows", "Hardware/Software", "User Training",
                             ],
+                            logoUrl: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Bras%C3%A3o_de_Gua%C3%ADba.svg",
                         },
                     ],
                 },

@@ -14,6 +14,7 @@ type ExperienceItem = {
   period: string;
   details: string[];
   highlights: string[];
+  logoUrl: string;
 };
 
 function ExperienceCard({ item, defaultOpen }: { item: ExperienceItem; defaultOpen: boolean }) {
@@ -25,9 +26,16 @@ function ExperienceCard({ item, defaultOpen }: { item: ExperienceItem; defaultOp
         <CardHeader>
           <CollapsibleTrigger asChild>
             <div className="flex justify-between items-center cursor-pointer">
-              <div className="text-left">
-                <CardTitle className="font-headline text-2xl">{item.role}</CardTitle>
-                <CardDescription>{item.company}</CardDescription>
+              <div className="flex items-center gap-3 text-left">
+                <img
+                  src={item.logoUrl}
+                  alt={item.company}
+                  className="w-10 h-10 object-contain rounded"
+                />
+                <div>
+                  <CardTitle className="font-headline text-xl sm:text-2xl">{item.role}</CardTitle>
+                  <CardDescription>{item.company}</CardDescription>
+                </div>
               </div>
               <div className="flex items-center gap-4">
                 <Badge variant="outline" className="hidden sm:block">{item.period}</Badge>
