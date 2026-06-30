@@ -30,7 +30,7 @@ const skillIcons: Record<string, string> = {
   "PostgreSQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
 
   // Tools — GitHub raw simple-icons (always available, no CORS issues)
-  "Zabbix": "https://raw.githubusercontent.com/simple-icons/simple-icons/master/icons/zabbix.svg",
+  "Zabbix": "https://i.imgur.com/RT6K4kT.png",
   "Grafana": "https://raw.githubusercontent.com/simple-icons/simple-icons/master/icons/grafana.svg",
   "Sophos Firewall": "https://i.imgur.com/rHopY14.png",
   "Omada Controller": "https://raw.githubusercontent.com/simple-icons/simple-icons/master/icons/tplink.svg",
