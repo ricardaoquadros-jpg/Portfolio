@@ -179,7 +179,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                     items: [
                         {
                             company: "TK Elevator",
-                            role: "Tests & Qualification Analyst (Estágio)",
+                            role: "Analista de Testes e Qualificação (Estágio)",
                             period: "Junho/2026 – Presente",
                             details: [
                                 "Atuo na qualificação e validação de sistemas embarcados para mobilidade urbana, utilizando Python para automação de testes em ambientes Linux (Raspberry Pi).",
@@ -189,7 +189,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                                 "Embedded Software Testing", "Python Automation", "Linux (Raspberry Pi)",
                                 "Test Farm Stability", "Simulator Preparation", "Test Qualification & Validation",
                             ],
-                            logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Thyssenkrupp_Elevator_AG_Logo_2021.svg/320px-Thyssenkrupp_Elevator_AG_Logo_2021.svg",
+                            logoUrl: "https://i.imgur.com/ukxrMO0.png",
                         },
                         {
                             company: "Prefeitura Municipal de Guaíba",
@@ -204,7 +204,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                                 "PHP/MySQL", "Omada Controller", "Zabbix/Grafana",
                                 "Sophos Firewall", "Certificados Digitais", "Desenvolvimento Web",
                             ],
-                            logoUrl: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Bras%C3%A3o_de_Gua%C3%ADba.svg",
+                            logoUrl: "https://i.imgur.com/Lgsy22x.png",
                         },
                         {
                             company: "Prefeitura Municipal de Guaíba",
@@ -218,7 +218,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                                 "Suporte Técnico", "+250 Chamados", "AnyDesk",
                                 "Windows", "Hardware/Software", "Treinamento de Usuários",
                             ],
-                            logoUrl: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Bras%C3%A3o_de_Gua%C3%ADba.svg",
+                            logoUrl: "https://i.imgur.com/Lgsy22x.png",
                         },
                     ],
                 },
@@ -411,7 +411,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                                 "Embedded Software Testing", "Python Automation", "Linux (Raspberry Pi)",
                                 "Test Farm Stability", "Simulator Preparation", "Test Qualification & Validation",
                             ],
-                            logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Thyssenkrupp_Elevator_AG_Logo_2021.svg/320px-Thyssenkrupp_Elevator_AG_Logo_2021.svg",
+                            logoUrl: "https://i.imgur.com/ukxrMO0.png",
                         },
                         {
                             company: "Guaíba City Hall",
@@ -426,7 +426,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                                 "PHP/MySQL", "Omada Controller", "Zabbix/Grafana",
                                 "Sophos Firewall", "Digital Certificates", "Web Development",
                             ],
-                            logoUrl: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Bras%C3%A3o_de_Gua%C3%ADba.svg",
+                            logoUrl: "https://i.imgur.com/Lgsy22x.png",
                         },
                         {
                             company: "Guaíba City Hall",
@@ -440,7 +440,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                                 "Technical Support", "+250 Tickets", "AnyDesk",
                                 "Windows", "Hardware/Software", "User Training",
                             ],
-                            logoUrl: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Bras%C3%A3o_de_Gua%C3%ADba.svg",
+                            logoUrl: "https://i.imgur.com/Lgsy22x.png",
                         },
                     ],
                 },
