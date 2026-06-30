@@ -200,7 +200,20 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                             ],
                             highlights: [
                                 "PHP/MySQL", "Omada Controller", "Zabbix/Grafana",
-                                "Sophos Firewall", "Suporte Técnico (+250 chamados)", "Desenvolvimento Web",
+                                "Sophos Firewall", "Certificados Digitais", "Desenvolvimento Web",
+                            ],
+                        },
+                        {
+                            company: "Prefeitura Municipal de Guaíba",
+                            role: "Estagiário de TI (Suporte Técnico)",
+                            period: "Agosto/2025 – Novembro/2025",
+                            details: [
+                                "Resolvi mais de 250 tickets de suporte técnico remoto e presencial em ambiente Windows, realizando diagnóstico de hardware, software e rede via AnyDesk.",
+                                "Realizei treinamento de usuários e suporte contínuo, reduzindo a taxa de chamados recorrentes. Instalação e configuração de impressoras, softwares e gerenciamento de senhas.",
+                            ],
+                            highlights: [
+                                "Suporte Técnico", "+250 Chamados", "AnyDesk",
+                                "Windows", "Hardware/Software", "Treinamento de Usuários",
                             ],
                         },
                     ],
@@ -406,7 +419,20 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                             ],
                             highlights: [
                                 "PHP/MySQL", "Omada Controller", "Zabbix/Grafana",
-                                "Sophos Firewall", "Technical Support (+250 tickets)", "Web Development",
+                                "Sophos Firewall", "Digital Certificates", "Web Development",
+                            ],
+                        },
+                        {
+                            company: "Guaíba City Hall",
+                            role: "IT Support Intern",
+                            period: "August/2025 – November/2025",
+                            details: [
+                                "Resolved 250+ remote and on-site support tickets in a Windows environment, performing hardware, software, and network diagnosis via AnyDesk.",
+                                "Conducted user training and ongoing support, reducing recurring ticket rates. Printer installation, software configuration, and password management.",
+                            ],
+                            highlights: [
+                                "Technical Support", "+250 Tickets", "AnyDesk",
+                                "Windows", "Hardware/Software", "User Training",
                             ],
                         },
                     ],
