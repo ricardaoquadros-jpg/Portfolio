@@ -3,9 +3,9 @@
 import { Section } from "@/components/shared/section";
 import { useLanguage } from "@/context/language-context";
 
-// Mapeamento de skills para seus ícones (usando imagens da web ou emoji como fallback)
+// Skill icon mapping — reliable CDN URLs only (devicon + simple-icons via jsDelivr)
 const skillIcons: Record<string, string> = {
-  // Linguagens de Programação
+  // Languages
   "Python": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
   "JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
   "TypeScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
@@ -13,34 +13,32 @@ const skillIcons: Record<string, string> = {
   "SQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
   "C": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
 
-  // Frameworks & Bibliotecas
+  // Frameworks & Libraries
   "React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    "Next.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+  "Next.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
   "Tailwind CSS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
 
-  // Testing & QA / Infraestrutura
+  // DevOps & Infrastructure
   "Linux": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
   "Git": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
   "GitHub": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+  "Docker": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+  "CI/CD": "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/githubactions.svg",
 
-  // Banco de Dados
+  // Databases
   "MySQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
   "PostgreSQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
 
-  // Ferramentas (fallback)
-  "Zabbix": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Zabbix_logo.svg",
-  "Grafana": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Grafana_icon.svg",
-  "Sophos Firewall": "https://upload.wikimedia.org/wikipedia/commons/5/53/Sophos_logo.svg",
-  "Omada Controller": "https://cdn-icons-png.flaticon.com/512/3674/3674477.png",
-  "Power BI": "https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg",
-  "CI/CD": "https://cdn-icons-png.flaticon.com/512/2809/2809347.png",
-  "Embedded Testing": "https://cdn-icons-png.flaticon.com/512/2103/2103499.png",
-  "Test Automation": "https://cdn-icons-png.flaticon.com/512/3095/3095257.png",
-  "Simulators": "https://cdn-icons-png.flaticon.com/512/1995/1995515.png",
-  "Simuladores": "https://cdn-icons-png.flaticon.com/512/1995/1995515.png",
+  // Tools & Platforms (simple-icons via jsDelivr)
+  "Zabbix": "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/zabbix.svg",
+  "Grafana": "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/grafana.svg",
+  "Sophos Firewall": "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/sophos.svg",
+  "Omada Controller": "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/tplink.svg",
+  "Power BI": "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/powerbi.svg",
+  "Jira": "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/jira.svg",
 };
 
-// Skills que precisam de ícone maior
+// Skills without a mapped icon get a styled initial-letter fallback (automatic)
 const largerIconSkills: string[] = [];
 
 function SkillCard({ skill }: { skill: string }) {
@@ -54,6 +52,7 @@ function SkillCard({ skill }: { skill: string }) {
           src={iconUrl}
           alt={skill}
           className={`mb-3 group-hover:scale-110 transition-transform duration-300 object-contain ${isLargerIcon ? 'w-20 h-20' : 'w-12 h-12'}`}
+          loading="lazy"
         />
       ) : (
         <div className="w-12 h-12 mb-3 bg-primary/10 rounded-lg flex items-center justify-center text-primary font-bold text-lg">
@@ -69,7 +68,6 @@ export function Skills() {
   const { language, translations } = useLanguage();
   const skillsContent = translations[language].skills;
 
-  // Flatten all skills from categories into a single array
   const allSkills = Object.values(skillsContent.categories).flat();
 
   return (
