@@ -193,7 +193,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                         },
                         {
                             company: "Prefeitura Municipal de Guaíba",
-                            role: "Estagiário de TI (Infraestrutura e Redes)",
+                            role: "Infraestrutura e Redes (Estágio)",
                             period: "Novembro/2025 – Junho/2026",
                             details: [
                                 "Gerenciei redes com Omada Controller (APs, switches, VLANs) e monitorei a infraestrutura via Zabbix e Grafana, identificando falhas e indisponibilidades.",
@@ -208,7 +208,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                         },
                         {
                             company: "Prefeitura Municipal de Guaíba",
-                            role: "Estagiário de TI (Suporte Técnico)",
+                            role: "Suporte Técnico (Estágio)",
                             period: "Agosto/2025 – Novembro/2025",
                             details: [
                                 "Resolvi mais de 250 tickets de suporte técnico remoto e presencial em ambiente Windows, realizando diagnóstico de hardware, software e rede via AnyDesk.",
