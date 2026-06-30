@@ -42,12 +42,13 @@ export interface Translation {
     experience: {
         title: string;
         subtitle: string;
-        company: string;
-        role: string;
-        period: string;
-        responsibilities: string;
-        experienceDetails: string[];
-        highlights: string[];
+        items: {
+            company: string;
+            role: string;
+            period: string;
+            details: string[];
+            highlights: string[];
+        }[];
     };
     skills: {
         title: string;
@@ -174,19 +175,36 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
         experience: {
                     title: "Experiência Profissional",
                     subtitle: "Atuação prática e desenvolvimento de competências no mercado de trabalho.",
-                    company: "TK Elevator",
-                    role: "Tests & Qualification Analyst (Estágio)",
-                    period: "Junho/2026 – Presente",
-                    responsibilities: "",
-                    experienceDetails: [
-                        "Atuo na qualificação e validação de sistemas embarcados para mobilidade urbana, utilizando Python para automação de testes em ambientes Linux (Raspberry Pi). Realizo preparação de simuladores, suporte às equipes de teste e estabilização da testing farm.",
-                        "Anteriormente, atuei como Estagiário de TI na Prefeitura de Guaíba (ago/2025 – jun/2026), onde comecei no suporte técnico remoto (+250 chamados resolvidos) e fui promovido para Infraestrutura e Redes. Lá gerenciei redes com Omada Controller, monitoramento com Zabbix/Grafana, Sophos Firewall e desenvolvi um sistema web PHP/MySQL para controle de protocolos adotado por toda a equipe.",
+                    items: [
+                        {
+                            company: "TK Elevator",
+                            role: "Tests & Qualification Analyst (Estágio)",
+                            period: "Junho/2026 – Presente",
+                            details: [
+                                "Atuo na qualificação e validação de sistemas embarcados para mobilidade urbana, utilizando Python para automação de testes em ambientes Linux (Raspberry Pi).",
+                                "Realizo preparação de simuladores, suporte às equipes de teste e estabilização da testing farm, garantindo a confiabilidade do ambiente de testes.",
+                            ],
+                            highlights: [
+                                "Embedded Software Testing", "Python Automation", "Linux (Raspberry Pi)",
+                                "Test Farm Stability", "Simulator Preparation", "Test Qualification & Validation",
+                            ],
+                        },
+                        {
+                            company: "Prefeitura Municipal de Guaíba",
+                            role: "Estagiário de TI (Infraestrutura e Redes)",
+                            period: "Novembro/2025 – Junho/2026",
+                            details: [
+                                "Gerenciei redes com Omada Controller (APs, switches, VLANs) e monitorei a infraestrutura via Zabbix e Grafana, identificando falhas e indisponibilidades.",
+                                "Configurei políticas de segurança no Sophos Firewall (VPN, inspeção de tráfego, controle de acesso) e realizei implantação de certificados digitais nos departamentos municipais.",
+                                "Desenvolvi e implantei um sistema web interno em PHP/MySQL para controle de protocolos com CRUD completo, geração de PDF com assinatura digital e envio automatizado por e-mail — adotado por toda a equipe, reduzindo o retrabalho entre setores.",
+                            ],
+                            highlights: [
+                                "PHP/MySQL", "Omada Controller", "Zabbix/Grafana",
+                                "Sophos Firewall", "Suporte Técnico (+250 chamados)", "Desenvolvimento Web",
+                            ],
+                        },
                     ],
-                    highlights: [
-                        "Embedded Software Testing", "Python Automation", "Linux (Raspberry Pi)",
-                        "Test Farm Stability", "Simulator Preparation", "Test Qualification & Validation",
-                    ],
-        },
+                },
         skills: {
             title: "Competências Técnicas",
             subtitle: "Habilidades e tecnologias que domino, priorizadas por relevância e sofisticação.",
@@ -363,19 +381,36 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
         experience: {
                     title: "Professional Experience",
                     subtitle: "Practical experience and skill development in the job market.",
-                    company: "TK Elevator",
-                    role: "Tests & Qualification Analyst (Intern)",
-                    period: "June/2026 – Present",
-                    responsibilities: "",
-                    experienceDetails: [
-                        "I work on qualification and validation of embedded systems for urban mobility, using Python for test automation on Linux environments (Raspberry Pi). I handle simulator setup, testing team support, and test farm stability.",
-                        "Previously, I worked as an IT Intern at Guaíba City Hall (Aug/2025 – Jun/2026), starting in remote technical support (+250 tickets resolved) and being promoted to Infrastructure & Networks. There I managed networks with Omada Controller, monitoring with Zabbix/Grafana, Sophos Firewall, and developed a PHP/MySQL web system for protocol management adopted by the entire team.",
+                    items: [
+                        {
+                            company: "TK Elevator",
+                            role: "Tests & Qualification Analyst (Intern)",
+                            period: "June/2026 – Present",
+                            details: [
+                                "I work on qualification and validation of embedded systems for urban mobility, using Python for test automation on Linux environments (Raspberry Pi).",
+                                "I handle simulator setup, testing team support, and test farm stability, ensuring a reliable testing environment.",
+                            ],
+                            highlights: [
+                                "Embedded Software Testing", "Python Automation", "Linux (Raspberry Pi)",
+                                "Test Farm Stability", "Simulator Preparation", "Test Qualification & Validation",
+                            ],
+                        },
+                        {
+                            company: "Guaíba City Hall",
+                            role: "IT Intern (Infrastructure & Networks)",
+                            period: "November/2025 – June/2026",
+                            details: [
+                                "Managed networks with Omada Controller (APs, switches, VLANs) and monitored infrastructure via Zabbix and Grafana, identifying failures and outages.",
+                                "Configured security policies on Sophos Firewall (VPN, traffic inspection, access control) and deployed digital certificates across municipal departments.",
+                                "Developed and deployed an internal PHP/MySQL web system for protocol management with full CRUD, PDF generation with digital signature, and automated email notifications — adopted by the entire team, reducing inter-department rework.",
+                            ],
+                            highlights: [
+                                "PHP/MySQL", "Omada Controller", "Zabbix/Grafana",
+                                "Sophos Firewall", "Technical Support (+250 tickets)", "Web Development",
+                            ],
+                        },
                     ],
-                    highlights: [
-                        "Embedded Software Testing", "Python Automation", "Linux (Raspberry Pi)",
-                        "Test Farm Stability", "Simulator Preparation", "Test Qualification & Validation",
-                    ],
-        },
+                },
         skills: {
             title: "Technical Skills",
             subtitle: "Skills and technologies I master, prioritized by relevance and sophistication.",
