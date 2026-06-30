@@ -1,7 +1,7 @@
 "use client";
 import * as React from "react";
 import { Section } from "@/components/shared/section";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Briefcase, ChevronDown } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { useLanguage } from "@/context/language-context";
@@ -25,39 +25,37 @@ function ExperienceCard({ item, defaultOpen }: { item: ExperienceItem; defaultOp
       <Card className="shadow-lg">
         <CardHeader>
           <CollapsibleTrigger asChild>
-            <div className="flex justify-between items-center cursor-pointer">
-              <div className="flex items-center gap-3 text-left">
-                <img
-                  src={item.logoUrl}
-                  alt={item.company}
-                  className="w-10 h-10 object-contain rounded"
-                />
-                <div>
-                  <CardTitle className="font-headline text-xl sm:text-2xl">{item.role}</CardTitle>
-                  <CardDescription>{item.company}</CardDescription>
-                </div>
+            <div className="flex items-center gap-3 cursor-pointer">
+              <img
+                src={item.logoUrl}
+                alt={item.company}
+                className="w-11 h-11 object-contain rounded flex-shrink-0"
+              />
+              <div className="flex-1 min-w-0 text-left">
+                <CardTitle className="font-headline text-lg sm:text-xl leading-tight">
+                  {item.role}
+                </CardTitle>
+                <p className="text-sm text-muted-foreground">
+                  {item.company} <span className="mx-1.5 text-border">·</span> {item.period}
+                </p>
               </div>
-              <div className="flex items-center gap-4">
-                <Badge variant="outline" className="hidden sm:block">{item.period}</Badge>
-                <Button variant="ghost" size="icon" className="h-8 w-8">
-                  <ChevronDown className={`h-5 w-5 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
-                  <span className="sr-only">{isOpen ? "Fechar" : "Expandir"}</span>
-                </Button>
-              </div>
+              <Button variant="ghost" size="icon" className="h-8 w-8 flex-shrink-0">
+                <ChevronDown className={`h-5 w-5 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+                <span className="sr-only">{isOpen ? "Fechar" : "Expandir"}</span>
+              </Button>
             </div>
           </CollapsibleTrigger>
-          <Badge variant="outline" className="sm:hidden mt-2 inline-flex w-fit">{item.period}</Badge>
         </CardHeader>
         <CollapsibleContent>
           <CardContent>
             <div className="space-y-4">
               {item.details.map((paragraph, pIndex) => (
-                <p key={pIndex} className="indent-8 text-justify">{paragraph}</p>
+                <p key={pIndex} className="indent-8 text-justify text-sm">{paragraph}</p>
               ))}
             </div>
             <div className="flex flex-wrap gap-2 mt-4">
               {item.highlights.map((highlight) => (
-                <Badge key={highlight} variant="secondary">
+                <Badge key={highlight} variant="secondary" className="text-xs">
                   {highlight}
                 </Badge>
               ))}
