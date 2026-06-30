@@ -3,9 +3,9 @@
 import { Section } from "@/components/shared/section";
 import { useLanguage } from "@/context/language-context";
 
-// Skill icon mapping — reliable CDN URLs only (devicon + simple-icons via jsDelivr)
+// All icon URLs use jsDelivr (devicon, simple-icons, tabler-icons) — no Flaticon, no Wikimedia
 const skillIcons: Record<string, string> = {
-  // Languages
+  // Languages (devicon)
   "Python": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
   "JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
   "TypeScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
@@ -13,37 +13,39 @@ const skillIcons: Record<string, string> = {
   "SQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
   "C": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
 
-  // Frameworks & Libraries
+  // Frameworks (devicon)
   "React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   "Next.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
   "Tailwind CSS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
 
-  // DevOps & Infrastructure
+  // DevOps & Infra (devicon + simple-icons CDN)
   "Linux": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
   "Git": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
   "GitHub": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
   "Docker": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
-  "CI/CD": "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/githubactions.svg",
+  "CI/CD": "https://cdn.simpleicons.org/githubactions/999",
+  "Jira": "https://cdn.simpleicons.org/jira/999",
 
-  // Databases
+  // Databases (devicon)
   "MySQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
   "PostgreSQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
 
-  // Tools & Platforms (simple-icons via jsDelivr)
-  "Zabbix": "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/zabbix.svg",
-  "Grafana": "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/grafana.svg",
-  "Sophos Firewall": "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/sophos.svg",
-  "Omada Controller": "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/tplink.svg",
-  "Power BI": "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/powerbi.svg",
-  "Jira": "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/jira.svg",
-};
+  // Tools — simple-icons CDN (official, always up)
+  "Zabbix": "https://cdn.simpleicons.org/zabbix/DC382D",
+  "Grafana": "https://cdn.simpleicons.org/grafana/F46800",
+  "Sophos Firewall": "https://cdn.simpleicons.org/sophos/5C9AD3",
+  "Omada Controller": "https://cdn.simpleicons.org/tplink/4ACBD6",
+  "Power BI": "https://cdn.simpleicons.org/powerbi/F2C811",
 
-// Skills without a mapped icon get a styled initial-letter fallback (automatic)
-const largerIconSkills: string[] = [];
+  // Generic concepts — Tabler Icons via jsDelivr (reliable SVG)
+  "Embedded Testing": "https://cdn.jsdelivr.net/npm/@tabler/icons@3.x/icons/outline/cpu.svg",
+  "Test Automation": "https://cdn.jsdelivr.net/npm/@tabler/icons@3.x/icons/outline/robot.svg",
+  "Simulators": "https://cdn.jsdelivr.net/npm/@tabler/icons@3.x/icons/outline/monitor.svg",
+  "Simuladores": "https://cdn.jsdelivr.net/npm/@tabler/icons@3.x/icons/outline/monitor.svg",
+};
 
 function SkillCard({ skill }: { skill: string }) {
   const iconUrl = skillIcons[skill];
-  const isLargerIcon = largerIconSkills.includes(skill);
 
   return (
     <div className="group flex flex-col items-center justify-center p-6 bg-card border border-border rounded-2xl shadow-sm hover:shadow-lg hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 min-w-[120px]">
@@ -51,7 +53,7 @@ function SkillCard({ skill }: { skill: string }) {
         <img
           src={iconUrl}
           alt={skill}
-          className={`mb-3 group-hover:scale-110 transition-transform duration-300 object-contain ${isLargerIcon ? 'w-20 h-20' : 'w-12 h-12'}`}
+          className="mb-3 group-hover:scale-110 transition-transform duration-300 object-contain w-12 h-12"
           loading="lazy"
         />
       ) : (
@@ -67,7 +69,6 @@ function SkillCard({ skill }: { skill: string }) {
 export function Skills() {
   const { language, translations } = useLanguage();
   const skillsContent = translations[language].skills;
-
   const allSkills = Object.values(skillsContent.categories).flat();
 
   return (
