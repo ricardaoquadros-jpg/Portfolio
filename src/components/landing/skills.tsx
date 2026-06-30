@@ -37,7 +37,7 @@ const skillIcons: Record<string, string> = {
   "Power BI": "https://raw.githubusercontent.com/simple-icons/simple-icons/master/icons/powerbi.svg",
 
   // Generic concepts — restored original Flaticon URLs (user confirmed they work)
-  "Embedded Testing": "https://cdn-icons-png.flaticon.com/512/2103/2103499.png",
+  "Embedded Testing": "https://i.imgur.com/llt9oFj.png",
   "Test Automation": "https://cdn-icons-png.flaticon.com/512/3095/3095257.png",
   "Simulators": "https://cdn-icons-png.flaticon.com/512/1995/1995515.png",
   "Simuladores": "https://cdn-icons-png.flaticon.com/512/1995/1995515.png",
