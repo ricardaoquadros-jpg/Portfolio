@@ -3,7 +3,6 @@
 import { Section } from "@/components/shared/section";
 import { useLanguage } from "@/context/language-context";
 
-// All icon URLs use jsDelivr (devicon, simple-icons, tabler-icons) — no Flaticon, no Wikimedia
 const skillIcons: Record<string, string> = {
   // Languages (devicon)
   "Python": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
@@ -18,30 +17,30 @@ const skillIcons: Record<string, string> = {
   "Next.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
   "Tailwind CSS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
 
-  // DevOps & Infra (devicon + simple-icons CDN)
+  // DevOps & Infra (devicon)
   "Linux": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
   "Git": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
   "GitHub": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
   "Docker": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
-  "CI/CD": "https://cdn.simpleicons.org/githubactions/999",
-  "Jira": "https://cdn.simpleicons.org/jira/999",
+  "CI/CD": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg",
+  "Jira": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg",
 
   // Databases (devicon)
   "MySQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
   "PostgreSQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
 
-  // Tools — simple-icons CDN (official, always up)
-  "Zabbix": "https://cdn.simpleicons.org/zabbix/DC382D",
-  "Grafana": "https://cdn.simpleicons.org/grafana/F46800",
-  "Sophos Firewall": "https://cdn.simpleicons.org/sophos/5C9AD3",
-  "Omada Controller": "https://cdn.simpleicons.org/tplink/4ACBD6",
-  "Power BI": "https://cdn.simpleicons.org/powerbi/F2C811",
+  // Tools — GitHub raw simple-icons (always available, no CORS issues)
+  "Zabbix": "https://raw.githubusercontent.com/simple-icons/simple-icons/master/icons/zabbix.svg",
+  "Grafana": "https://raw.githubusercontent.com/simple-icons/simple-icons/master/icons/grafana.svg",
+  "Sophos Firewall": "https://raw.githubusercontent.com/simple-icons/simple-icons/master/icons/sophos.svg",
+  "Omada Controller": "https://raw.githubusercontent.com/simple-icons/simple-icons/master/icons/tplink.svg",
+  "Power BI": "https://raw.githubusercontent.com/simple-icons/simple-icons/master/icons/powerbi.svg",
 
-  // Generic concepts — Tabler Icons via jsDelivr (reliable SVG)
-  "Embedded Testing": "https://cdn.jsdelivr.net/npm/@tabler/icons@3.x/icons/outline/cpu.svg",
-  "Test Automation": "https://cdn.jsdelivr.net/npm/@tabler/icons@3.x/icons/outline/robot.svg",
-  "Simulators": "https://cdn.jsdelivr.net/npm/@tabler/icons@3.x/icons/outline/monitor.svg",
-  "Simuladores": "https://cdn.jsdelivr.net/npm/@tabler/icons@3.x/icons/outline/monitor.svg",
+  // Generic concepts — restored original Flaticon URLs (user confirmed they work)
+  "Embedded Testing": "https://cdn-icons-png.flaticon.com/512/2103/2103499.png",
+  "Test Automation": "https://cdn-icons-png.flaticon.com/512/3095/3095257.png",
+  "Simulators": "https://cdn-icons-png.flaticon.com/512/1995/1995515.png",
+  "Simuladores": "https://cdn-icons-png.flaticon.com/512/1995/1995515.png",
 };
 
 function SkillCard({ skill }: { skill: string }) {
