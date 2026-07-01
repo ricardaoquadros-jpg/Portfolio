@@ -249,9 +249,9 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                 },
                 {
                     title: "Frontend vs. Backend",
-                    description: "Site educacional interativo desenvolvido como TCC, explicando as diferenças entre Frontend e Backend com exemplos práticos, diagramas e conteúdo gerado por IA.",
+                    description: "Site educacional interativo desenvolvido como TCC, explicando as diferenças entre Frontend e Backend com cards de tecnologia, dashboard de pesquisa real e chatbot com IA (Gemini).",
                     image: PlaceHolderImages.find(img => img.id === 'project-frontend-backend'),
-                    tags: ["HTML5", "CSS3", "JavaScript", "Firebase Studio", "Gemini 2.5 Flash", "Git", "GitHub"],
+                    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Gemini AI", "Recharts", "Vercel"],
                     githubUrl: "https://github.com/ricardaoquadros-jpg/Tcc",
                 },
                 {
@@ -472,9 +472,9 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                 },
                 {
                     title: "Frontend vs. Backend",
-                    description: "Interactive educational website developed as a final project, explaining the differences between Frontend and Backend with practical examples, diagrams and AI-generated content.",
+                    description: "Interactive educational website developed as a final project (TCC), explaining Frontend vs Backend with technology cards, real survey data dashboard, and an AI-powered chatbot (Gemini).",
                     image: PlaceHolderImages.find(img => img.id === 'project-frontend-backend'),
-                    tags: ["HTML5", "CSS3", "JavaScript", "Firebase Studio", "Gemini 2.5 Flash", "Git", "GitHub"],
+                    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Gemini AI", "Recharts", "Vercel"],
                     githubUrl: "https://github.com/ricardaoquadros-jpg/Tcc",
                 },
                 {
