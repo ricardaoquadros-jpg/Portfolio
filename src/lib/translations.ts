@@ -256,6 +256,13 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                     githubUrl: "https://github.com/ricardaoquadros-jpg/Tcc",
                 },
                 {
+                    title: "Lume — Rastreador Financeiro IA",
+                    description: "Aplicativo completo de gestão financeira com rastreamento em tempo real, 20+ categorias, gráficos interativos (Chart.js), assistente de IA conversacional (LLaMA 3.3 via OpenRouter) e comando de voz para adicionar despesas (n8n + OpenAI Whisper).",
+                    image: PlaceHolderImages.find(img => img.id === 'project-portfolio-v1'),
+                    tags: ["PHP", "MySQL", "TypeScript", "Chart.js", "OpenAI", "n8n", "LLaMA 3.3", "OpenRouter"],
+                    githubUrl: "https://github.com/ricardaoquadros-jpg/Lume",
+                },
+                {
                     title: "Protocolo de Entrega",
                     description: "Sistema completo para a Prefeitura de Guaíba com geração de protocolos, assinatura digital via Canvas, geração de PDF, envio automático por e-mail e painel administrativo com dashboard.",
                     image: PlaceHolderImages.find(img => img.id === 'project-protocolo-entrega'),
@@ -479,6 +486,13 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                     image: PlaceHolderImages.find(img => img.id === 'project-frontend-backend'),
                     tags: ["Next.js", "TypeScript", "Tailwind CSS", "Gemini AI", "Recharts", "Vercel"],
                     githubUrl: "https://github.com/ricardaoquadros-jpg/Tcc",
+                },
+                {
+                    title: "Lume — AI Financial Tracker",
+                    description: "Full-stack finance app with real-time tracking, 20+ categories, interactive charts (Chart.js), conversational AI assistant (LLaMA 3.3 via OpenRouter), and voice-to-expense command (n8n + OpenAI Whisper).",
+                    image: PlaceHolderImages.find(img => img.id === 'project-portfolio-v1'),
+                    tags: ["PHP", "MySQL", "TypeScript", "Chart.js", "OpenAI", "n8n", "LLaMA 3.3", "OpenRouter"],
+                    githubUrl: "https://github.com/ricardaoquadros-jpg/Lume",
                 },
                 {
                     title: "Delivery Protocol",
