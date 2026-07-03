@@ -121,6 +121,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
             { href: "#experience", label: "Experiência" },
             { href: "#skills", label: "Competências" },
             { href: "#projects", label: "Projetos" },
+            { href: "#certifications", label: "Certificações" },
             { href: "#contact", label: "Contato" },
         ],
         header: {
@@ -345,6 +346,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
             { href: "#experience", label: "Experience" },
             { href: "#skills", label: "Skills" },
             { href: "#projects", label: "Projects" },
+            { href: "#certifications", label: "Certifications" },
             { href: "#contact", label: "Contact" },
         ],
         header: {
