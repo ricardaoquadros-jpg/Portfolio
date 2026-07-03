@@ -267,6 +267,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
             title: "Cursos e Certificações",
             subtitle: "Minhas qualificações e aprendizados contínuos.",
             items: [
+                            { name: "Introduction to Cybersecurity", institution: "Cisco Networking Academy", url: "https://www.netacad.com/courses/cybersecurity/introduction-cybersecurity" },
                             { name: "Linux Unhatched", institution: "Cisco Networking Academy & NDG", url: "https://www.credly.com/badges/d47a7a2e-68f5-4339-9e42-80bbaff0f600/linked_in_profile" },
                             { name: "Relational Databases and SQL", institution: "Stanford Online (edX)", url: "https://www.edx.org/learn/sql/stanford-university-databases-relational-databases-and-sql" },
                             { name: "Claude Code 101", institution: "Anthropic", url: "https://learn.anthropic.com/" },
@@ -490,6 +491,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
             title: "Courses and Certifications",
             subtitle: "My qualifications and continuous learning.",
             items: [
+                            { name: "Introduction to Cybersecurity", institution: "Cisco Networking Academy", url: "https://www.netacad.com/courses/cybersecurity/introduction-cybersecurity" },
                             { name: "Linux Unhatched", institution: "Cisco Networking Academy & NDG", url: "https://www.credly.com/badges/d47a7a2e-68f5-4339-9e42-80bbaff0f600/linked_in_profile" },
                             { name: "Relational Databases and SQL", institution: "Stanford Online (edX)", url: "https://www.edx.org/learn/sql/stanford-university-databases-relational-databases-and-sql" },
                             { name: "Claude Code 101", institution: "Anthropic", url: "https://learn.anthropic.com/" },
