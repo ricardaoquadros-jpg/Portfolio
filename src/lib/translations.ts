@@ -307,7 +307,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                 { type: "email", Icon: "contact", text: "ricardaoquadros@gmail.com", href: "mailto:ricardaoquadros@gmail.com" },
                 { type: "phone", Icon: "phone", text: "(51) 99524-1338", href: "tel:+5551995241338" },
                 { type: "location", Icon: "location", text: "Guaíba – Rio Grande do Sul, Brasil", href: "https://pt.wikipedia.org/wiki/Gua%C3%ADba" },
-                { type: "cv", Icon: "download", text: "Baixar Currículo", href: "https://docs.google.com/document/d/1bz_syLDndCEs0JT92XSdn1VsyBVwUvjg/export?format=docx" },
+                { type: "cv", Icon: "download", text: "Baixar Currículo", href: "/Ricardo-Quadros-CV.pdf" },
             ],
             toast: {
                 title: "Copiado!",
@@ -540,7 +540,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
                 { type: "email", Icon: "contact", text: "ricardaoquadros@gmail.com", href: "mailto:ricardaoquadros@gmail.com" },
                 { type: "phone", Icon: "phone", text: "+55 51 99524-1338", href: "tel:+5551995241338" },
                 { type: "location", Icon: "location", text: "Guaíba – Rio Grande do Sul, Brazil", href: "https://en.wikipedia.org/wiki/Gua%C3%ADba" },
-                { type: "cv", Icon: "download", text: "Download CV", href: "https://docs.google.com/document/d/1bz_syLDndCEs0JT92XSdn1VsyBVwUvjg/export?format=docx" },
+                { type: "cv", Icon: "download", text: "Download CV", href: "/Ricardo-Quadros-CV.pdf" },
             ],
             toast: {
                 title: "Copied!",
