@@ -275,6 +275,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
             title: "Cursos e Certificações",
             subtitle: "Minhas qualificações e aprendizados contínuos.",
             items: [
+                            { name: "Artificial Intelligence Fundamentals", institution: "IBM SkillsBuild", url: "https://www.credly.com/badges/d80aaed7-c104-4677-9132-3d59a9a56ba3/linked_in_profile" },
                             { name: "Introduction to Cybersecurity", institution: "Cisco Networking Academy", url: "https://www.credly.com/badges/dbe8e869-8459-48cd-8b4d-ba1d17aee407/linked_in_profile" },
                             { name: "Technical Support Fundamentals", institution: "Google (Coursera)", url: "https://www.coursera.org/account/accomplishments/verify/MD5VGZSKHF81" },
                             { name: "Linux Unhatched", institution: "Cisco Networking Academy & NDG", url: "https://www.credly.com/badges/d47a7a2e-68f5-4339-9e42-80bbaff0f600/linked_in_profile" },
@@ -508,6 +509,7 @@ export const translations: Record<'pt-BR' | 'en', Translation> = {
             title: "Courses and Certifications",
             subtitle: "My qualifications and continuous learning.",
             items: [
+                            { name: "Artificial Intelligence Fundamentals", institution: "IBM SkillsBuild", url: "https://www.credly.com/badges/d80aaed7-c104-4677-9132-3d59a9a56ba3/linked_in_profile" },
                             { name: "Introduction to Cybersecurity", institution: "Cisco Networking Academy", url: "https://www.credly.com/badges/dbe8e869-8459-48cd-8b4d-ba1d17aee407/linked_in_profile" },
                             { name: "Technical Support Fundamentals", institution: "Google (Coursera)", url: "https://www.coursera.org/account/accomplishments/verify/MD5VGZSKHF81" },
                             { name: "Linux Unhatched", institution: "Cisco Networking Academy & NDG", url: "https://www.credly.com/badges/d47a7a2e-68f5-4339-9e42-80bbaff0f600/linked_in_profile" },
